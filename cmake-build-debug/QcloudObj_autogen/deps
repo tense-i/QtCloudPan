@@ -470,11 +470,14 @@ QcloudObj_autogen/timestamp: \
 	D:/Code/qcode/QcloudObj/mainWidget/mainwindow.cpp \
 	D:/Code/qcode/QcloudObj/mainWidget/mainwindow.h \
 	D:/Code/qcode/QcloudObj/resource/resources.qrc \
+	D:/Code/qcode/QcloudObj/utils/header/Common.h \
 	D:/Code/qcode/QcloudObj/utils/header/DBUtils.h \
-	D:/Code/qcode/QcloudObj/utils/header/HttpRequest.h \
+	D:/Code/qcode/QcloudObj/utils/header/QHttpRequest.h \
 	D:/Code/qcode/QcloudObj/utils/header/movablewidget.h \
+	D:/Code/qcode/QcloudObj/utils/source/Common.cpp \
 	D:/Code/qcode/QcloudObj/utils/source/DBUtils.cpp \
-	D:/Code/qcode/QcloudObj/utils/source/HttpRequest.cpp \
+	D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp \
+	D:/Code/qcode/QcloudObj/utils/source/des.c \
 	D:/Code/qcode/QcloudObj/utils/source/movablewidget.cpp \
 	D:/Code/qcode/QcloudObj/LoginDialog/Source/logindialog.ui \
 	D:/Code/qcode/QcloudObj/LoginDialog/Source/titlewidget.ui \

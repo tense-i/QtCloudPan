@@ -47,6 +47,7 @@ add_executable(QcloudObj main.cpp
         utils/header/QHttpRequest.h
         utils/source/Common.cpp
         utils/header/Common.h
+        utils/source/des.c
 )
 target_link_libraries(QcloudObj
         Qt::Core

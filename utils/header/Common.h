@@ -9,7 +9,7 @@
 #include <QString>
 
 
-const QString LOGIN_INFO_PATH = "config/cfg.json";
+const QString LOGIN_INFO_PATH = "../config/cfg.json";
 
 class Common {
 public:

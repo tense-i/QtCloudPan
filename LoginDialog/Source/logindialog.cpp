@@ -75,6 +75,18 @@ LoginDialog::LoginDialog(QWidget *parent) : QDialog(parent), ui(new Ui::LoginDia
     this->setFixedSize(600, 400);
     ui->stackedWidget->setCurrentIndex(0);
     //    ui->editUsername->setText("admin");
+
+    // 读取登录信息
+    QString username;
+    QString password;
+    bool isRemember;
+    Common::readLoginInfo(username, password, isRemember);
+    // 渲染登录信息
+    if (isRemember) {
+        ui->editUsername->setText(username);
+        ui->editPasswd->setText(password);
+        ui->ckboxSavePasswd->setChecked(true);
+    }
 }
 
 
