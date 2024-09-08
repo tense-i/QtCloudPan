@@ -48,6 +48,8 @@ add_executable(QcloudObj main.cpp
         utils/source/Common.cpp
         utils/header/Common.h
         utils/source/des.c
+        LoginDialog/Source/LoginUserInfo.cpp
+        LoginDialog/Header/LoginUserInfo.h
 )
 target_link_libraries(QcloudObj
         Qt::Core

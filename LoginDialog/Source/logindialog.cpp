@@ -5,30 +5,29 @@
 // You may need to build the project (run Qt uic code generator) to get "ui_LoginDialog.h" resolved
 
 #include "logindialog.h"
-#include "../utils/header/DBUtils.h"
-#include "QDebug"
-#include "QImageWriter"
-#include <QSqlError>
-
 #include "../utils/header/Common.h"
 #include "../utils/header/QHttpRequest.h"
+#include "./header/LoginUserInfo.h"
+#include "QDebug"
+#include "QImageWriter"
 #include "QPainter"
-#include "QPixmap"
+
 #include "ui_LoginDialog.h"
 #include "ui_TitleWidget.h"
+
 
 #include <QCryptographicHash>
 #include <QFile>
 #include <QJsonDocument>
 #include <QLabel>
 #include <QLineEdit>
-#include <QNetworkAccessManager>
+
 #include <QNetworkReply>
-#include <QNetworkRequest>
+
 #include <QPushButton>
 #include <QRegularExpression>
 #include <QToolButton>
-#include <QVBoxLayout>
+
 
 const QString username_reg = "^[a-zA-Z0-9_\u4e00-\u9fa5]{4,16}$";
 const QString password_reg = "^[a-zA-Z0-9]{6,12}$";
@@ -106,7 +105,7 @@ void LoginDialog::paintEvent(QPaintEvent *event) {
 void LoginDialog::login() {
     QString username = ui->editUsername->text();
     QString password = ui->editPasswd->text();
-
+    bool isRemember = ui->ckboxSavePasswd->isChecked();
     LoginDialog::ErrorType err = checkInput(username, password, ui->labTip);
     switch (err) {
         case ErrorType::EmptyUsernameOrPasswd:
@@ -131,21 +130,21 @@ void LoginDialog::login() {
     request->sendPostRequest();
 
     QNetworkReply *reply = request->getReply();
-    connect(reply, &QNetworkReply::finished, [this, reply]() {
-        qDebug() << reply;
+    connect(reply, &QNetworkReply::finished, [=]() {
         if (reply->error() == QNetworkReply::NoError) {
             QByteArray data = reply->readAll();
             QJsonDocument doc = QJsonDocument::fromJson(data);
             QJsonObject obj = doc.object();
-            // 打印返回的数据
-            qDebug() << obj;
-            qDebug() << obj.value("status").toInt() << " " << obj.value("code").toInt();
             if (obj.value("status").toInt() == 1) {
                 emit loginSuccessSignal();
                 ui->labTip->setText("登录成功");
-
+                // 读取Token
+                QString token = obj.value("token").toString();
+                qDebug() << "token: " << token;
                 // 保存登录信息
-                Common::writeLoginInfo(ui->editUsername->text(), ui->editPasswd->text(), ui->ckboxSavePasswd->isChecked());
+                Common::writeLoginInfo(username, password, isRemember, token);
+                // 保存登录信息到单例
+                saveUserInfo(username, password, token, isRemember);
 
             } else {
                 ui->labTip->setText("用户名或密码错误");
@@ -265,4 +264,12 @@ void LoginDialog::loginSuccess() {
 void LoginDialog::registerSuccess() {
 }
 void LoginDialog::rememberUser(QString username, QString password) {
+}
+void LoginDialog::saveUserInfo(QString username, QString password, QString token, bool isRemember) {
+    LoginUserInfo *loginUserInfo = LoginUserInfo::getInstance();
+    loginUserInfo->setUsername(username);
+    loginUserInfo->setToken(token);
+    loginUserInfo->setIsRemember(isRemember);
+    loginUserInfo->setIp("localhost");
+    loginUserInfo->setPort("8080");
 }

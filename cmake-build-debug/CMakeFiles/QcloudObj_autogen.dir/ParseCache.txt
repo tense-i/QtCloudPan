@@ -958,6 +958,7 @@ D:/Code/qcode/QcloudObj/mainWidget/mainwindow.h
  mdp:D:/App/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/App/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/App/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+D:/Code/qcode/QcloudObj/LoginDialog/Source/LoginUserInfo.cpp
 D:/Code/qcode/QcloudObj/utils/header/DBUtils.h
 D:/Code/qcode/QcloudObj/utils/header/movablewidget.h
  mmc:Q_OBJECT
@@ -1285,5 +1286,6 @@ D:/Code/qcode/QcloudObj/utils/source/movablewidget.cpp
 D:/Code/qcode/QcloudObj/utils/source/HttpRequest.cpp
 D:/Code/qcode/QcloudObj/utils/header/Common.h
 D:/Code/qcode/QcloudObj/utils/header/QHttpRequest.h
+D:/Code/qcode/QcloudObj/LoginDialog/Header/LoginUserInfo.h
 D:/Code/qcode/QcloudObj/utils/source/Common.cpp
 D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp

@@ -17,7 +17,7 @@ public:
     ~Common();
 
     // 写登录信息
-    static void writeLoginInfo(QString username, QString password, bool isRemember, QString path = LOGIN_INFO_PATH);
+    static void writeLoginInfo(QString username, QString password, bool isRemember, QString token, QString path = LOGIN_INFO_PATH);
     // 读登录信息
     static void readLoginInfo(QString &username, QString &password, bool &isRemember, QString path = LOGIN_INFO_PATH);
 

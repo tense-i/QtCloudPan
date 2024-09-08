@@ -457,7 +457,9 @@ QcloudObj_autogen/timestamp: \
 	D:/App/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
 	D:/App/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
 	D:/Code/qcode/QcloudObj/CMakeLists.txt \
+	D:/Code/qcode/QcloudObj/LoginDialog/Header/LoginUserInfo.h \
 	D:/Code/qcode/QcloudObj/LoginDialog/Header/titlewidget.h \
+	D:/Code/qcode/QcloudObj/LoginDialog/Source/LoginUserInfo.cpp \
 	D:/Code/qcode/QcloudObj/LoginDialog/Source/logindialog.cpp \
 	D:/Code/qcode/QcloudObj/LoginDialog/Source/titlewidget.cpp \
 	D:/Code/qcode/QcloudObj/LoginDialog/logindialog.h \

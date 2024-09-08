@@ -12,7 +12,7 @@
 
 Common::~Common() {
 }
-void Common::writeLoginInfo(QString username, QString password, bool isRemember, QString path) {
+void Common::writeLoginInfo(QString username, QString password, bool isRemember, QString token, QString path) {
 
     // des加密username
     unsigned char encUsername[1024] = {0};
@@ -45,6 +45,7 @@ void Common::writeLoginInfo(QString username, QString password, bool isRemember,
     } else {
         map.insert("isRemember", "false");
     }
+    map.insert("token", token);
     QJsonDocument doc = QJsonDocument::fromVariant(map);
     QFile file(path);
     // 输出当前路径

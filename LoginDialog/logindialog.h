@@ -44,6 +44,7 @@ private:
     };
     ErrorType checkInput(QString username, QString password, QLabel *labTip);
     void rememberUser(QString username, QString password);
+    void saveUserInfo(QString username, QString password, QString token, bool isRemember);
     //    void initQSS();// 初始化QSS样式
 private slots:
     void login();       // 登录槽函数
