@@ -1,0 +1,13 @@
+/* 通用样式 */
+QToolButton {
+  background-color: transparent; /* 移除背景颜色 */
+  border: none; /* 移除边框 */
+  padding: 0px; /* 移除内边距 */
+  margin: 0px; /* 移除外边距 */
+  
+}
+
+QToolButton::hover {
+  background-color: rgba(255, 255, 255, 0.1); /* 鼠标悬停时的背景颜色 */
+}
+

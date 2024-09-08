@@ -1,0 +1,34 @@
+{
+	"BUILD_DIR" : "D:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Code/qcode/QcloudObj/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Code/qcode/QcloudObj/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Code/qcode/QcloudObj",
+	"CMAKE_SOURCE_DIR" : "D:/Code/qcode/QcloudObj",
+	"INCLUDE_DIR" : "D:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen/include",
+	"INPUTS" : 
+	[
+		"D:/Code/qcode/QcloudObj/resource/style/LoginDialogStyle.qss",
+		"D:/Code/qcode/QcloudObj/resource/style/styles.qss",
+		"D:/Code/qcode/QcloudObj/resource/style/base.qss",
+		"D:/Code/qcode/QcloudObj/resource/icon/zuidahua.png",
+		"D:/Code/qcode/QcloudObj/resource/icon/login_bk2.png",
+		"D:/Code/qcode/QcloudObj/resource/icon/guanbi.png",
+		"D:/Code/qcode/QcloudObj/resource/icon/zuidahua_1.png",
+		"D:/Code/qcode/QcloudObj/resource/icon/logo.png",
+		"D:/Code/qcode/QcloudObj/resource/icon/4xww8d.png",
+		"D:/Code/qcode/QcloudObj/resource/icon/logo.ico",
+		"D:/Code/qcode/QcloudObj/resource/icon/zuixiaohua_1.png",
+		"D:/Code/qcode/QcloudObj/resource/icon/login_bk.jpg",
+		"D:/Code/qcode/QcloudObj/resource/icon/zuixiaohua.png"
+	],
+	"LOCK_FILE" : "D:/Code/qcode/QcloudObj/cmake-build-debug/CMakeFiles/QcloudObj_autogen.dir/AutoRcc_resources_6WJNPILU4A_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "6WJNPILU4A",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "D:/App/Qt/6.2.4/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "D:/Code/qcode/QcloudObj/cmake-build-debug/CMakeFiles/QcloudObj_autogen.dir/AutoRcc_resources_6WJNPILU4A_Used.txt",
+	"SOURCE" : "D:/Code/qcode/QcloudObj/resource/resources.qrc",
+	"VERBOSITY" : 0
+}

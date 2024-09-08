@@ -1,0 +1,103 @@
+/* 去除所有小部件的默认边距和填充 */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* QPushButton: 去除边框、背景色和内边距 */
+QPushButton {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+/* QLineEdit: 去除边框、背景色和内边距 */
+QLineEdit {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+/* QComboBox: 去除边框、背景色和内边距 */
+QComboBox {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+/* QCheckBox: 去除边框、背景色和内边距 */
+QCheckBox {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+/* QLabel: 去除背景色 */
+QLabel {
+  background: none;
+}
+
+/* QScrollBar: 去除背景色和边框 */
+QScrollBar {
+  background: none;
+  border: none;
+}
+
+/* QTableView: 去除网格线和边框 */
+QTableView {
+  gridline-color: none;
+  border: none;
+  background: none;
+}
+
+/* QTabBar: 去除标签页的背景色和边框 */
+QTabBar::tab {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+/* QSlider: 去除滑块的边框和背景色 */
+QSlider::groove:horizontal, QSlider::handle:horizontal {
+  border: none;
+  background: none;
+}
+
+/* QProgressBar: 去除边框和背景色 */
+QProgressBar {
+  border: none;
+  background: none;
+  text-align: center;
+}
+
+/* QMenu: 去除背景色和边框 */
+QMenu {
+  background: none;
+  border: none;
+}
+
+/* QMenuBar: 去除背景色和边框 */
+QMenuBar {
+  background: none;
+  border: none;
+}
+
+/* QToolBar: 去除背景色和边框 */
+QToolBar {
+  background: none;
+  border: none;
+}
+
+/* QTreeView: 去除边框和背景色 */
+QTreeView {
+  border: none;
+  background: none;
+}
+
+/* 通用样式 */
+QToolButton {
+  background-color: transparent; /* 移除背景颜色 */
+  border: none; /* 移除边框 */
+  padding: 0px; /* 移除内边距 */
+  margin: 0px; /* 移除外边距 */
+}

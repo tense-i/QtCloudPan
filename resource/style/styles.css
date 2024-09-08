@@ -1,0 +1,46 @@
+/* 设置窗口背景颜色 */
+QWidget {
+    background-color: #2c3e50;
+}
+
+/* 标题标签样式 */
+QLabel#titleLabel {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+/* 输入框样式 */
+QLineEdit {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #34495e;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+QLineEdit::hover {
+    border: 1px solid #2980b9;
+}
+
+/* 按钮样式 */
+QPushButton {
+    font-size: 16px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: #ecf0f1;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #1abc9c;
+}
+
