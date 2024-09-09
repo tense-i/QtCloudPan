@@ -28,10 +28,8 @@ QToolButton {
   border: none; /* 无边框 */
   margin: 0px;
   padding: 0px; /* 内边距设置为0 */
-  width: 41px; /* 设置按钮宽度 */
-  height: 25px; /* 设置按钮高度 */
-  icon-size: 40px; /* 设置图标大小适配按钮 */
 }
+
 
 /* 增加按钮之间的间距 */
 #toolBtnMin {
@@ -146,3 +144,4 @@ QToolButton:pressed {
   border-image: url(:/icon/login_bk2.png) 0 0 0 0 stretch stretch;
 }
  */
+

@@ -136,22 +136,23 @@ void LoginDialog::login() {
             QJsonDocument doc = QJsonDocument::fromJson(data);
             QJsonObject obj = doc.object();
             if (obj.value("status").toInt() == 1) {
-                emit loginSuccessSignal();
+
                 ui->labTip->setText("登录成功");
                 // 读取Token
                 QString token = obj.value("token").toString();
-                qDebug() << "token: " << token;
+
                 // 保存登录信息
                 Common::writeLoginInfo(username, password, isRemember, token);
+
                 // 保存登录信息到单例
                 saveUserInfo(username, password, token, isRemember);
+                emit loginSuccessSignal();
 
             } else {
                 ui->labTip->setText("用户名或密码错误");
                 return;
             }
         } else {
-            qDebug() << reply->error();
             ui->labTip->setText("网络错误");
             return;
         }
@@ -221,6 +222,7 @@ void LoginDialog::registerUser() {
 
                 // 注册成功
                 emit registerSuccessSignal();
+                ui->stackedWidget->setCurrentIndex(0);
 
             } else if (status == 2) {
                 ui->labTip_rg->setText("用户名已存在");

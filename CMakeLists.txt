@@ -22,7 +22,8 @@ include_directories(${CMAKE_SOURCE_DIR}/mainWidget)
 include_directories(${CMAKE_SOURCE_DIR}/resource)
 include_directories(${CMAKE_SOURCE_DIR}/LoginDialog/Header)
 include_directories(${CMAKE_SOURCE_DIR}/LoginDialog/source)
-
+include_directories(${CMAKE_SOURCE_DIR}/mainWidget/header)
+include_directories(${CMAKE_SOURCE_DIR}/mainWidget/source)
 
 FILE(GLOB_RECURSE RC_FILES ${CMAKE_SOURCE_DIR}/resource/*.rc)
 FILE(GLOB_RECURSE QRC_FILES ${CMAKE_SOURCE_DIR}/resource/*.qrc)
@@ -40,9 +41,9 @@ add_executable(QcloudObj main.cpp
         utils/header/movablewidget.h
         utils/source/DBUtils.cpp
         utils/header/DBUtils.h
-        mainWidget/mainwindow.cpp
+        mainWidget/source/mainwindow.cpp
         mainWidget/mainwindow.h
-        mainWidget/mainwindow.ui
+        mainWidget/source/mainwindow.ui
         utils/source/QHttpRequest.cpp
         utils/header/QHttpRequest.h
         utils/source/Common.cpp
@@ -50,6 +51,12 @@ add_executable(QcloudObj main.cpp
         utils/source/des.c
         LoginDialog/Source/LoginUserInfo.cpp
         LoginDialog/Header/LoginUserInfo.h
+        mainWidget/source/topbtngroup.cpp
+        mainWidget/header/topbtngroup.h
+        utils/utils.h
+        mainWidget/source/myfilewidget.cpp
+        mainWidget/header/myfilewidget.h
+        mainWidget/source/myfilewidget.ui
 )
 target_link_libraries(QcloudObj
         Qt::Core

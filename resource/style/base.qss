@@ -101,3 +101,12 @@ QToolButton {
   padding: 0px; /* 移除内边距 */
   margin: 0px; /* 移除外边距 */
 }
+
+
+/*去除groupbox的默认属性*/
+QGroupBox {
+  border: none;
+  margin: 0;
+  padding: 0;
+  
+}

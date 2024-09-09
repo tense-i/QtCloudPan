@@ -469,8 +469,10 @@ QcloudObj_autogen/timestamp: \
 	D:/Code/qcode/QcloudObj/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake \
 	D:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen/moc_predefs.h \
 	D:/Code/qcode/QcloudObj/main.cpp \
-	D:/Code/qcode/QcloudObj/mainWidget/mainwindow.cpp \
+	D:/Code/qcode/QcloudObj/mainWidget/header/topbtngroup.h \
 	D:/Code/qcode/QcloudObj/mainWidget/mainwindow.h \
+	D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.cpp \
+	D:/Code/qcode/QcloudObj/mainWidget/source/topbtngroup.cpp \
 	D:/Code/qcode/QcloudObj/resource/resources.qrc \
 	D:/Code/qcode/QcloudObj/utils/header/Common.h \
 	D:/Code/qcode/QcloudObj/utils/header/DBUtils.h \
@@ -481,7 +483,9 @@ QcloudObj_autogen/timestamp: \
 	D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp \
 	D:/Code/qcode/QcloudObj/utils/source/des.c \
 	D:/Code/qcode/QcloudObj/utils/source/movablewidget.cpp \
+	D:/Code/qcode/QcloudObj/utils/utils.h \
 	D:/Code/qcode/QcloudObj/LoginDialog/Source/logindialog.ui \
 	D:/Code/qcode/QcloudObj/LoginDialog/Source/titlewidget.ui \
-	D:/Code/qcode/QcloudObj/mainWidget/mainwindow.ui \
+	D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.ui \
+	D:/Code/qcode/QcloudObj/mainWidget/source/topbtngroup.ui \
 	D:/App/Clion/CLion\ 2023.2/bin/cmake/win/x64/bin/cmake.exe

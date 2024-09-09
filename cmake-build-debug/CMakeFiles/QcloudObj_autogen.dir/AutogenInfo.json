@@ -285,6 +285,18 @@
 			null
 		],
 		[
+			"D:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.h",
+			"MU",
+			"GL4Z4FGM4U/moc_myfilewidget.cpp",
+			null
+		],
+		[
+			"D:/Code/qcode/QcloudObj/mainWidget/header/topbtngroup.h",
+			"MU",
+			"GL4Z4FGM4U/moc_topbtngroup.cpp",
+			null
+		],
+		[
 			"D:/Code/qcode/QcloudObj/mainWidget/mainwindow.h",
 			"MU",
 			"Y3ATJYOBJX/moc_mainwindow.cpp",
@@ -312,6 +324,12 @@
 			"D:/Code/qcode/QcloudObj/utils/header/movablewidget.h",
 			"MU",
 			"4YVKRCMG4V/moc_movablewidget.cpp",
+			null
+		],
+		[
+			"D:/Code/qcode/QcloudObj/utils/utils.h",
+			"MU",
+			"7HEHEGDA3T/moc_utils.cpp",
 			null
 		]
 	],
@@ -347,6 +365,8 @@
 		"D:/Code/qcode/QcloudObj/resource",
 		"D:/Code/qcode/QcloudObj/LoginDialog/Header",
 		"D:/Code/qcode/QcloudObj/LoginDialog/Source",
+		"D:/Code/qcode/QcloudObj/mainWidget/header",
+		"D:/Code/qcode/QcloudObj/mainWidget/source",
 		"D:/App/Qt/6.2.4/mingw_64/include/QtCore",
 		"D:/App/Qt/6.2.4/mingw_64/include",
 		"D:/App/Qt/6.2.4/mingw_64/mkspecs/win32-g++",
@@ -401,7 +421,21 @@
 			null
 		],
 		[ "D:/Code/qcode/QcloudObj/main.cpp", "MU", null ],
-		[ "D:/Code/qcode/QcloudObj/mainWidget/mainwindow.cpp", "MU", null ],
+		[
+			"D:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/qcode/QcloudObj/mainWidget/source/topbtngroup.cpp",
+			"MU",
+			null
+		],
 		[ "D:/Code/qcode/QcloudObj/utils/source/Common.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/DBUtils.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp", "MU", null ],

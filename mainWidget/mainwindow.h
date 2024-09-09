@@ -20,9 +20,17 @@ class mainWindow : public QWidget {
 public:
     explicit mainWindow(QWidget *parent = nullptr);
     ~mainWindow() override;
+    void setUsernameInUI(QString username);
+
+private:
+    void initBaseQSS();
+    void initSlot();
+private slots:
+    void showMaxed();
 
 private:
     Ui::mainWindow *ui;
+    bool isMaximized_ = false;
 };
 
 

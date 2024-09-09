@@ -10,12 +10,20 @@
         <file>icon/logo.png</file>
         <file>icon/login_bk2.png</file>
         <file>icon/4xww8d.png</file>
+        <file>icon/upload.png</file>
+        <file>icon/title_change.png</file>
+        <file>icon/title_data.png</file>
+        <file>icon/title_file.png</file>
+        <file>icon/title_hot.png</file>
+        <file>icon/title_share.png</file>
+        <file>icon/title_user.png</file>
     </qresource>
 
     <qresource prefix="/">
         <file>style/LoginDialogStyle.qss</file>
         <file>style/styles.qss</file>
         <file>style/base.qss</file>
+        <file>style/mainWindow.qss</file>
     </qresource>
 
 </RCC>
