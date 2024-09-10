@@ -5,14 +5,15 @@
 // You may need to build the project (run Qt uic code generator) to get "ui_mainWindow.h" resolved
 
 #include "mainwindow.h"
+#include "../LoginDialog/Header/LoginUserInfo.h"
+#include "../LoginDialog/logindialog.h"
 #include "header/topbtngroup.h"
 #include "ui_TopBtnGroup.h"
 #include "ui_mainWindow.h"
-
 #include <QFile>
 #include <QToolButton>
 
-mainWindow::mainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::mainWindow) {
+mainWindow::mainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::mainWindow), loginDialog(new LoginDialog) {
     ui->setupUi(this);
     initBaseQSS();
     initSlot();
@@ -75,4 +76,19 @@ void mainWindow::initSlot() {
     connect(ui->topTitleWidget, &TopBtnGroup::open_shareListPage, this, [=]() {
         ui->stackedWidget->setCurrentWidget(ui->page_shareList);
     });
+    connect(loginDialog, &LoginDialog::loginSuccessSignal, this, [=] {
+        qDebug() << "loginSuccessSignal in mainWindow";
+        this->show();
+        loginDialog->close();
+        ui->pageMyfile->getMyFileCount();
+        setUsernameInUI(LoginUserInfo::getInstance()->getUsername());
+    });
+
+    connect(ui->pageMyfile, &MyFileWidget::sig_LoginAgain, this, [=] {
+        this->hide();
+        loginDialog->show();
+    });
+}
+void mainWindow::showLoginDialog() {
+    loginDialog->show();
 }

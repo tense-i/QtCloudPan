@@ -147,7 +147,8 @@ void LoginDialog::login() {
                 // 保存登录信息到单例
                 saveUserInfo(username, password, token, isRemember);
                 emit loginSuccessSignal();
-
+                qDebug() << "sigLoginSuccess";
+                return;
             } else {
                 ui->labTip->setText("用户名或密码错误");
                 return;

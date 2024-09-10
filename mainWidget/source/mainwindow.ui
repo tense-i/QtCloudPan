@@ -25,19 +25,6 @@
     </widget>
    </item>
    <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>107</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item>
     <widget class="QWidget" name="mainErea" native="true">
      <property name="minimumSize">
       <size>
@@ -48,21 +35,7 @@
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
-        <widget class="QWidget" name="pageMyfile">
-         <widget class="QLabel" name="label">
-          <property name="geometry">
-           <rect>
-            <x>60</x>
-            <y>70</y>
-            <width>54</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
-        </widget>
+        <widget class="MyFileWidget" name="pageMyfile"/>
         <widget class="QWidget" name="page_User">
          <widget class="QLabel" name="label_4">
           <property name="geometry">
@@ -93,21 +66,7 @@
           </property>
          </widget>
         </widget>
-        <widget class="QWidget" name="pageUpdateList">
-         <widget class="QLabel" name="label_2">
-          <property name="geometry">
-           <rect>
-            <x>130</x>
-            <y>50</y>
-            <width>54</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
-        </widget>
+        <widget class="QWidget" name="pageUpdateList"/>
         <widget class="QWidget" name="page_shareList">
          <widget class="QLabel" name="label_3">
           <property name="geometry">
@@ -136,6 +95,12 @@
    <class>TopBtnGroup</class>
    <extends>QWidget</extends>
    <header>topbtngroup.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MyFileWidget</class>
+   <extends>QWidget</extends>
+   <header>myfilewidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

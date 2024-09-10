@@ -35,6 +35,7 @@ QcloudObj_autogen/timestamp: \
   D:/App/Clion/CLion\ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake \
   D:/App/Clion/CLion\ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake \
   D:/App/Clion/CLion\ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake \
+  D:/App/Qt/6.2.4/mingw_64/include/QtCore/QString \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qalgorithms.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qanystringview.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qarraydata.h \
@@ -115,6 +116,8 @@ QcloudObj_autogen/timestamp: \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qvariant.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qversiontagging.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtGui/QAction \
+  D:/App/Qt/6.2.4/mingw_64/include/QtGui/qaction.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qbitmap.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qbrush.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qcolor.h \
@@ -122,6 +125,7 @@ QcloudObj_autogen/timestamp: \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtGui/qicon.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qimage.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qpaintdevice.h \
@@ -141,10 +145,12 @@ QcloudObj_autogen/timestamp: \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QDialog \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QLabel \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QMenu \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qdialog.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qlabel.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qmenu.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -469,17 +475,23 @@ QcloudObj_autogen/timestamp: \
   CMakeFiles/3.26.4/CMakeSystem.cmake \
   QcloudObj_autogen/moc_predefs.h \
   D:/Code/qcode/QcloudObj/main.cpp \
+  D:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.cpp \
+  D:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.h \
+  D:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.h \
   D:/Code/qcode/QcloudObj/mainWidget/header/topbtngroup.h \
   D:/Code/qcode/QcloudObj/mainWidget/mainwindow.h \
   D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.cpp \
+  D:/Code/qcode/QcloudObj/mainWidget/source/myfilewidget.cpp \
   D:/Code/qcode/QcloudObj/mainWidget/source/topbtngroup.cpp \
   D:/Code/qcode/QcloudObj/resource/resources.qrc \
   D:/Code/qcode/QcloudObj/utils/header/Common.h \
   D:/Code/qcode/QcloudObj/utils/header/DBUtils.h \
+  D:/Code/qcode/QcloudObj/utils/header/FileInfo.h \
   D:/Code/qcode/QcloudObj/utils/header/QHttpRequest.h \
   D:/Code/qcode/QcloudObj/utils/header/movablewidget.h \
   D:/Code/qcode/QcloudObj/utils/source/Common.cpp \
   D:/Code/qcode/QcloudObj/utils/source/DBUtils.cpp \
+  D:/Code/qcode/QcloudObj/utils/source/FileInfo.cpp \
   D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp \
   D:/Code/qcode/QcloudObj/utils/source/des.c \
   D:/Code/qcode/QcloudObj/utils/source/movablewidget.cpp \
@@ -487,5 +499,6 @@ QcloudObj_autogen/timestamp: \
   D:/Code/qcode/QcloudObj/LoginDialog/Source/logindialog.ui \
   D:/Code/qcode/QcloudObj/LoginDialog/Source/titlewidget.ui \
   D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.ui \
+  D:/Code/qcode/QcloudObj/mainWidget/source/myfilewidget.ui \
   D:/Code/qcode/QcloudObj/mainWidget/source/topbtngroup.ui \
   D:/App/Clion/CLion\ 2023.2/bin/cmake/win/x64/bin/cmake.exe

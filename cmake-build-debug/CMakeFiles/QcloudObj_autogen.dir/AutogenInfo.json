@@ -285,6 +285,12 @@
 			null
 		],
 		[
+			"D:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.h",
+			"MU",
+			"GL4Z4FGM4U/moc_DownloadTask.cpp",
+			null
+		],
+		[
 			"D:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.h",
 			"MU",
 			"GL4Z4FGM4U/moc_myfilewidget.cpp",
@@ -312,6 +318,12 @@
 			"D:/Code/qcode/QcloudObj/utils/header/DBUtils.h",
 			"MU",
 			"4YVKRCMG4V/moc_DBUtils.cpp",
+			null
+		],
+		[
+			"D:/Code/qcode/QcloudObj/utils/header/FileInfo.h",
+			"MU",
+			"4YVKRCMG4V/moc_FileInfo.cpp",
 			null
 		],
 		[
@@ -422,12 +434,17 @@
 		],
 		[ "D:/Code/qcode/QcloudObj/main.cpp", "MU", null ],
 		[
-			"D:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.cpp",
+			"D:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.cpp",
 			"MU",
 			null
 		],
 		[
 			"D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/qcode/QcloudObj/mainWidget/source/myfilewidget.cpp",
 			"MU",
 			null
 		],
@@ -438,6 +455,7 @@
 		],
 		[ "D:/Code/qcode/QcloudObj/utils/source/Common.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/DBUtils.cpp", "MU", null ],
+		[ "D:/Code/qcode/QcloudObj/utils/source/FileInfo.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/des.c", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/movablewidget.cpp", "MU", null ]

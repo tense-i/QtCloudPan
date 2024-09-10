@@ -33,3 +33,34 @@ QToolButton#btnDownlowdList:pressed {
   padding-left: 7px; /* 模拟点击时的按压效果，向左和向下移动一点 */
   padding-top: 7px;
 }
+
+QMenu {
+  background-color: #F9F9F9; /* 菜单的背景颜色 */
+  border: 1px solid #E0E0E0; /* 边框颜色 */
+  border-radius: 8px; /* 圆角半径 */
+  padding: 5px; /* 内边距 */
+  /* 添加阴影效果 */
+}
+
+QMenu::item {
+  background-color: transparent; /* 默认情况下菜单项透明 */
+  padding: 8px 20px; /* 内边距使项有足够的点击区域 */
+  border-radius: 4px; /* 菜单项的圆角 */
+  color: #333333; /* 默认文字颜色 */
+}
+
+QMenu::item:selected {
+  background-color: #E0E0E0; /* 悬浮或选中时的背景色 */
+  color: #000000; /* 选中时的文字颜色 */
+}
+
+QMenu::item:pressed {
+  background-color: #D0D0D0; /* 点击时的背景色 */
+}
+
+QMenu::separator {
+  height: 1px;
+  background: #CCCCCC;
+  margin: 5px 0px;
+}
+

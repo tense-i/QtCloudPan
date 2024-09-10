@@ -145,9 +145,25 @@ build CMakeFiles/QcloudObj.dir/mainWidget/source/topbtngroup.cpp.obj: CXX_COMPIL
   OBJECT_DIR = CMakeFiles\QcloudObj.dir
   OBJECT_FILE_DIR = CMakeFiles\QcloudObj.dir\mainWidget\source
 
-build CMakeFiles/QcloudObj.dir/mainWidget/header/myfilewidget.cpp.obj: CXX_COMPILER__QcloudObj_unscanned_Debug D$:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.cpp || cmake_object_order_depends_target_QcloudObj
+build CMakeFiles/QcloudObj.dir/mainWidget/source/myfilewidget.cpp.obj: CXX_COMPILER__QcloudObj_unscanned_Debug D$:/Code/qcode/QcloudObj/mainWidget/source/myfilewidget.cpp || cmake_object_order_depends_target_QcloudObj
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\QcloudObj.dir\mainWidget\header\myfilewidget.cpp.obj.d
+  DEP_FILE = CMakeFiles\QcloudObj.dir\mainWidget\source\myfilewidget.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -ID:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen/include -ID:/Code/qcode/QcloudObj/LoginDialog -ID:/Code/qcode/QcloudObj/mainWidget -ID:/Code/qcode/QcloudObj/resource -ID:/Code/qcode/QcloudObj/LoginDialog/Header -ID:/Code/qcode/QcloudObj/LoginDialog/source -ID:/Code/qcode/QcloudObj/mainWidget/header -ID:/Code/qcode/QcloudObj/mainWidget/source -isystem D:/App/Qt/6.2.4/mingw_64/include/QtCore -isystem D:/App/Qt/6.2.4/mingw_64/include -isystem D:/App/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem D:/App/Qt/6.2.4/mingw_64/include/QtGui -isystem D:/App/Qt/6.2.4/mingw_64/include/QtWidgets -isystem D:/App/Qt/6.2.4/mingw_64/include/QtSql -isystem D:/App/Qt/6.2.4/mingw_64/include/QtNetwork
+  OBJECT_DIR = CMakeFiles\QcloudObj.dir
+  OBJECT_FILE_DIR = CMakeFiles\QcloudObj.dir\mainWidget\source
+
+build CMakeFiles/QcloudObj.dir/utils/source/FileInfo.cpp.obj: CXX_COMPILER__QcloudObj_unscanned_Debug D$:/Code/qcode/QcloudObj/utils/source/FileInfo.cpp || cmake_object_order_depends_target_QcloudObj
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\QcloudObj.dir\utils\source\FileInfo.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -ID:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen/include -ID:/Code/qcode/QcloudObj/LoginDialog -ID:/Code/qcode/QcloudObj/mainWidget -ID:/Code/qcode/QcloudObj/resource -ID:/Code/qcode/QcloudObj/LoginDialog/Header -ID:/Code/qcode/QcloudObj/LoginDialog/source -ID:/Code/qcode/QcloudObj/mainWidget/header -ID:/Code/qcode/QcloudObj/mainWidget/source -isystem D:/App/Qt/6.2.4/mingw_64/include/QtCore -isystem D:/App/Qt/6.2.4/mingw_64/include -isystem D:/App/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem D:/App/Qt/6.2.4/mingw_64/include/QtGui -isystem D:/App/Qt/6.2.4/mingw_64/include/QtWidgets -isystem D:/App/Qt/6.2.4/mingw_64/include/QtSql -isystem D:/App/Qt/6.2.4/mingw_64/include/QtNetwork
+  OBJECT_DIR = CMakeFiles\QcloudObj.dir
+  OBJECT_FILE_DIR = CMakeFiles\QcloudObj.dir\utils\source
+
+build CMakeFiles/QcloudObj.dir/mainWidget/header/DownloadTask.cpp.obj: CXX_COMPILER__QcloudObj_unscanned_Debug D$:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.cpp || cmake_object_order_depends_target_QcloudObj
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\QcloudObj.dir\mainWidget\header\DownloadTask.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -ID:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen/include -ID:/Code/qcode/QcloudObj/LoginDialog -ID:/Code/qcode/QcloudObj/mainWidget -ID:/Code/qcode/QcloudObj/resource -ID:/Code/qcode/QcloudObj/LoginDialog/Header -ID:/Code/qcode/QcloudObj/LoginDialog/source -ID:/Code/qcode/QcloudObj/mainWidget/header -ID:/Code/qcode/QcloudObj/mainWidget/source -isystem D:/App/Qt/6.2.4/mingw_64/include/QtCore -isystem D:/App/Qt/6.2.4/mingw_64/include -isystem D:/App/Qt/6.2.4/mingw_64/mkspecs/win32-g++ -isystem D:/App/Qt/6.2.4/mingw_64/include/QtGui -isystem D:/App/Qt/6.2.4/mingw_64/include/QtWidgets -isystem D:/App/Qt/6.2.4/mingw_64/include/QtSql -isystem D:/App/Qt/6.2.4/mingw_64/include/QtNetwork
   OBJECT_DIR = CMakeFiles\QcloudObj.dir
@@ -169,7 +185,7 @@ build CMakeFiles/QcloudObj.dir/QcloudObj_autogen/6WJNPILU4A/qrc_resources.cpp.ob
 #############################################
 # Link the executable QcloudObj.exe
 
-build QcloudObj.exe: CXX_EXECUTABLE_LINKER__QcloudObj_Debug CMakeFiles/QcloudObj.dir/QcloudObj_autogen/mocs_compilation.cpp.obj CMakeFiles/QcloudObj.dir/main.cpp.obj CMakeFiles/QcloudObj.dir/LoginDialog/Source/logindialog.cpp.obj CMakeFiles/QcloudObj.dir/LoginDialog/Source/titlewidget.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/movablewidget.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/DBUtils.cpp.obj CMakeFiles/QcloudObj.dir/mainWidget/source/mainwindow.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/QHttpRequest.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/Common.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/des.c.obj CMakeFiles/QcloudObj.dir/LoginDialog/Source/LoginUserInfo.cpp.obj CMakeFiles/QcloudObj.dir/mainWidget/source/topbtngroup.cpp.obj CMakeFiles/QcloudObj.dir/mainWidget/header/myfilewidget.cpp.obj CMakeFiles/QcloudObj.dir/QcloudObj_autogen/6WJNPILU4A/qrc_resources.cpp.obj | D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Sql.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Network.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Widgets.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Gui.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Core.a || QcloudObj_autogen QcloudObj_autogen_timestamp_deps
+build QcloudObj.exe: CXX_EXECUTABLE_LINKER__QcloudObj_Debug CMakeFiles/QcloudObj.dir/QcloudObj_autogen/mocs_compilation.cpp.obj CMakeFiles/QcloudObj.dir/main.cpp.obj CMakeFiles/QcloudObj.dir/LoginDialog/Source/logindialog.cpp.obj CMakeFiles/QcloudObj.dir/LoginDialog/Source/titlewidget.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/movablewidget.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/DBUtils.cpp.obj CMakeFiles/QcloudObj.dir/mainWidget/source/mainwindow.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/QHttpRequest.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/Common.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/des.c.obj CMakeFiles/QcloudObj.dir/LoginDialog/Source/LoginUserInfo.cpp.obj CMakeFiles/QcloudObj.dir/mainWidget/source/topbtngroup.cpp.obj CMakeFiles/QcloudObj.dir/mainWidget/source/myfilewidget.cpp.obj CMakeFiles/QcloudObj.dir/utils/source/FileInfo.cpp.obj CMakeFiles/QcloudObj.dir/mainWidget/header/DownloadTask.cpp.obj CMakeFiles/QcloudObj.dir/QcloudObj_autogen/6WJNPILU4A/qrc_resources.cpp.obj | D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Sql.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Network.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Widgets.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Gui.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Core.a || QcloudObj_autogen QcloudObj_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = D:/App/Qt/6.2.4/mingw_64/lib/libQt6Sql.a  D:/App/Qt/6.2.4/mingw_64/lib/libQt6Network.a  D:/App/Qt/6.2.4/mingw_64/lib/libQt6Widgets.a  D:/App/Qt/6.2.4/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  D:/App/Qt/6.2.4/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\QcloudObj.dir
@@ -212,7 +228,7 @@ build QcloudObj_autogen_timestamp_deps: phony CMakeFiles/QcloudObj_autogen_times
 #############################################
 # Utility command for QcloudObj_autogen
 
-build QcloudObj_autogen: phony CMakeFiles/QcloudObj_autogen QcloudObj_autogen/include/LoginDialog/Source/ui_logindialog.h QcloudObj_autogen/include/LoginDialog/Source/ui_titlewidget.h QcloudObj_autogen/include/mainWidget/source/ui_mainwindow.h QcloudObj_autogen/include/mainWidget/header/ui_myfilewidget.h QcloudObj_autogen/timestamp QcloudObj_autogen/mocs_compilation.cpp QcloudObj_autogen_timestamp_deps
+build QcloudObj_autogen: phony CMakeFiles/QcloudObj_autogen QcloudObj_autogen/include/LoginDialog/Source/ui_logindialog.h QcloudObj_autogen/include/LoginDialog/Source/ui_titlewidget.h QcloudObj_autogen/include/mainWidget/source/ui_mainwindow.h QcloudObj_autogen/include/mainWidget/source/ui_myfilewidget.h QcloudObj_autogen/timestamp QcloudObj_autogen/mocs_compilation.cpp QcloudObj_autogen_timestamp_deps
 
 
 #############################################
@@ -237,13 +253,13 @@ build QcloudObj_autogen/6WJNPILU4A/qrc_resources.cpp | ${cmake_ninja_workdir}Qcl
 #############################################
 # Phony custom command for CMakeFiles\QcloudObj_autogen_timestamp_deps
 
-build CMakeFiles/QcloudObj_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/QcloudObj_autogen_timestamp_deps: phony D$:/App/Qt/6.2.4/mingw_64/./bin/moc.exe D$:/App/Qt/6.2.4/mingw_64/./bin/uic.exe D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Network.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Sql.a
+build CMakeFiles/QcloudObj_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/QcloudObj_autogen_timestamp_deps: phony D$:/App/Qt/6.2.4/mingw_64/./bin/moc.exe D$:/App/Qt/6.2.4/mingw_64/./bin/uic.exe D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Sql.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Network.a
 
 
 #############################################
 # Phony custom command for CMakeFiles\QcloudObj_autogen
 
-build CMakeFiles/QcloudObj_autogen QcloudObj_autogen/include/LoginDialog/Source/ui_logindialog.h QcloudObj_autogen/include/LoginDialog/Source/ui_titlewidget.h QcloudObj_autogen/include/mainWidget/source/ui_mainwindow.h QcloudObj_autogen/include/mainWidget/header/ui_myfilewidget.h | ${cmake_ninja_workdir}CMakeFiles/QcloudObj_autogen ${cmake_ninja_workdir}QcloudObj_autogen/include/LoginDialog/Source/ui_logindialog.h ${cmake_ninja_workdir}QcloudObj_autogen/include/LoginDialog/Source/ui_titlewidget.h ${cmake_ninja_workdir}QcloudObj_autogen/include/mainWidget/source/ui_mainwindow.h ${cmake_ninja_workdir}QcloudObj_autogen/include/mainWidget/header/ui_myfilewidget.h: phony QcloudObj_autogen/timestamp || QcloudObj_autogen_timestamp_deps
+build CMakeFiles/QcloudObj_autogen QcloudObj_autogen/include/LoginDialog/Source/ui_logindialog.h QcloudObj_autogen/include/LoginDialog/Source/ui_titlewidget.h QcloudObj_autogen/include/mainWidget/source/ui_mainwindow.h QcloudObj_autogen/include/mainWidget/source/ui_myfilewidget.h | ${cmake_ninja_workdir}CMakeFiles/QcloudObj_autogen ${cmake_ninja_workdir}QcloudObj_autogen/include/LoginDialog/Source/ui_logindialog.h ${cmake_ninja_workdir}QcloudObj_autogen/include/LoginDialog/Source/ui_titlewidget.h ${cmake_ninja_workdir}QcloudObj_autogen/include/mainWidget/source/ui_mainwindow.h ${cmake_ninja_workdir}QcloudObj_autogen/include/mainWidget/source/ui_myfilewidget.h: phony QcloudObj_autogen/timestamp || QcloudObj_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

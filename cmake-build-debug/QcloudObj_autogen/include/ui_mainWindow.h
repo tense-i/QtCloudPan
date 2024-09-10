@@ -12,10 +12,10 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "myfilewidget.h"
 #include "topbtngroup.h"
 
 QT_BEGIN_NAMESPACE
@@ -25,18 +25,15 @@ class Ui_mainWindow
 public:
     QVBoxLayout *verticalLayout;
     TopBtnGroup *topTitleWidget;
-    QSpacerItem *verticalSpacer;
     QWidget *mainErea;
     QVBoxLayout *verticalLayout_2;
     QStackedWidget *stackedWidget;
-    QWidget *pageMyfile;
-    QLabel *label;
+    MyFileWidget *pageMyfile;
     QWidget *page_User;
     QLabel *label_4;
     QWidget *page_downlowdLIst;
     QLabel *label_5;
     QWidget *pageUpdateList;
-    QLabel *label_2;
     QWidget *page_shareList;
     QLabel *label_3;
     QWidget *page;
@@ -54,10 +51,6 @@ public:
 
         verticalLayout->addWidget(topTitleWidget);
 
-        verticalSpacer = new QSpacerItem(20, 107, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
         mainErea = new QWidget(mainWindow);
         mainErea->setObjectName(QString::fromUtf8("mainErea"));
         mainErea->setMinimumSize(QSize(0, 200));
@@ -65,11 +58,8 @@ public:
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         stackedWidget = new QStackedWidget(mainErea);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        pageMyfile = new QWidget();
+        pageMyfile = new MyFileWidget();
         pageMyfile->setObjectName(QString::fromUtf8("pageMyfile"));
-        label = new QLabel(pageMyfile);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(60, 70, 54, 16));
         stackedWidget->addWidget(pageMyfile);
         page_User = new QWidget();
         page_User->setObjectName(QString::fromUtf8("page_User"));
@@ -85,9 +75,6 @@ public:
         stackedWidget->addWidget(page_downlowdLIst);
         pageUpdateList = new QWidget();
         pageUpdateList->setObjectName(QString::fromUtf8("pageUpdateList"));
-        label_2 = new QLabel(pageUpdateList);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(130, 50, 54, 16));
         stackedWidget->addWidget(pageUpdateList);
         page_shareList = new QWidget();
         page_shareList->setObjectName(QString::fromUtf8("page_shareList"));
@@ -113,10 +100,8 @@ public:
     void retranslateUi(QWidget *mainWindow)
     {
         mainWindow->setWindowTitle(QCoreApplication::translate("mainWindow", "mainWindow", nullptr));
-        label->setText(QCoreApplication::translate("mainWindow", "TextLabel", nullptr));
         label_4->setText(QCoreApplication::translate("mainWindow", "TextLabel", nullptr));
         label_5->setText(QCoreApplication::translate("mainWindow", "TextLabel", nullptr));
-        label_2->setText(QCoreApplication::translate("mainWindow", "TextLabel", nullptr));
         label_3->setText(QCoreApplication::translate("mainWindow", "TextLabel", nullptr));
     } // retranslateUi
 

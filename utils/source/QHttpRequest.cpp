@@ -7,12 +7,11 @@ QHttpRequest::QHttpRequest()
     : manager(new QNetworkAccessManager()), reply(nullptr) {
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 }
+
 void QHttpRequest::setRequestUrl(const QString &url) {
     request.setUrl(QUrl(url));
 }
-void QHttpRequest::setRequestHeader(QNetworkRequest::KnownHeaders header, const QVariant &value) {
-    request.setHeader(header, value);
-}
+
 QHttpRequest::~QHttpRequest() {
     delete manager;
 }
@@ -36,4 +35,10 @@ void QHttpRequest::sendPostRequest(const QJsonObject &json) {
 void QHttpRequest::sendPostRequest(const QString &url, const QJsonObject &json) {
     setRequestUrl(url);
     sendPostRequest(json);
+}
+void QHttpRequest::setHeader(const QByteArray &headerName, const QByteArray &value) {
+    request.setRawHeader(headerName, value);
+}
+void QHttpRequest::setJWTToken(const QString &token) {
+    setHeader("Authorization", token.toUtf8());
 }

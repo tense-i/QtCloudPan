@@ -5,6 +5,7 @@
 #ifndef QCLOUDOBJ_MAINWINDOW_H
 #define QCLOUDOBJ_MAINWINDOW_H
 
+#include "../LoginDialog/logindialog.h"
 #include <QWidget>
 
 
@@ -21,6 +22,7 @@ public:
     explicit mainWindow(QWidget *parent = nullptr);
     ~mainWindow() override;
     void setUsernameInUI(QString username);
+    void showLoginDialog();
 
 private:
     void initBaseQSS();
@@ -31,6 +33,7 @@ private slots:
 private:
     Ui::mainWindow *ui;
     bool isMaximized_ = false;
+    LoginDialog *loginDialog;
 };
 
 

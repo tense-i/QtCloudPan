@@ -57,6 +57,10 @@ add_executable(QcloudObj main.cpp
         mainWidget/source/myfilewidget.cpp
         mainWidget/header/myfilewidget.h
         mainWidget/source/myfilewidget.ui
+        utils/source/FileInfo.cpp
+        utils/header/FileInfo.h
+        mainWidget/header/DownloadTask.cpp
+        mainWidget/header/DownloadTask.h
 )
 target_link_libraries(QcloudObj
         Qt::Core

@@ -2,6 +2,7 @@
 #include "../LoginDialog/Header/LoginUserInfo.h"
 #include "../utils/header/DBUtils.h"
 #include "./LoginDialog/logindialog.h"
+#include "./mainWidget/header/myfilewidget.h"
 #include "./mainWidget/mainwindow.h"
 
 #include "Header/titlewidget.h"
@@ -26,17 +27,9 @@ int main(int argc, char *argv[]) {
     initApplicationConfig();
     QApplication a(argc, argv);
 
-
-    LoginDialog loginDialog;
-    loginDialog.show();
     mainWindow mw;
     mw.resize(800, 600);
-    mw.connect(&loginDialog, &LoginDialog::loginSuccessSignal, &mw, [&] {
-        mw.show();
-        loginDialog.close();
-        qDebug() << LoginUserInfo::getInstance()->getUsername();
-        mw.setUsernameInUI(LoginUserInfo::getInstance()->getUsername());
-    });
+    mw.showLoginDialog();
 
     return QApplication::exec();
 }

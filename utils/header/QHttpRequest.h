@@ -21,8 +21,9 @@ class QHttpRequest {
 public:
     QHttpRequest();
     ~QHttpRequest();
+    void setHeader(const QByteArray &headerName, const QByteArray &value);
+    void setJWTToken(const QString &token);
     void setRequestUrl(const QString &url);
-    void setRequestHeader(QNetworkRequest::KnownHeaders header, const QVariant &value);
     void addRequestParameterInJson(const QString &key, const QJsonValue &value);
 
     void setRequestJson(const QJsonObject &json);
