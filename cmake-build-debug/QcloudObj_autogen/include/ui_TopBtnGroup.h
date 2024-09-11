@@ -24,6 +24,7 @@ QT_BEGIN_NAMESPACE
 class Ui_TopBtnGroup
 {
 public:
+    QHBoxLayout *horizontalLayout_4;
     QHBoxLayout *horizontalLayout_3;
     QHBoxLayout *horizontalLayout;
     QToolButton *btnUser;
@@ -38,6 +39,9 @@ public:
     QSpacerItem *horizontalSpacer_6;
     QToolButton *btnSwitchUser;
     QSpacerItem *horizontalSpacer;
+    QToolButton *btnUploadFile;
+    QSpacerItem *horizontalSpacer_7;
+    QSpacerItem *horizontalSpacer_8;
     QVBoxLayout *verticalLayout;
     QGroupBox *toolBtnGroup;
     QVBoxLayout *verticalLayout_2;
@@ -52,8 +56,10 @@ public:
     {
         if (TopBtnGroup->objectName().isEmpty())
             TopBtnGroup->setObjectName(QString::fromUtf8("TopBtnGroup"));
-        TopBtnGroup->resize(567, 141);
-        horizontalLayout_3 = new QHBoxLayout(TopBtnGroup);
+        TopBtnGroup->resize(899, 157);
+        horizontalLayout_4 = new QHBoxLayout(TopBtnGroup);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -133,12 +139,30 @@ public:
 
         horizontalLayout->addWidget(btnSwitchUser);
 
+        horizontalSpacer = new QSpacerItem(44, 17, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        btnUploadFile = new QToolButton(TopBtnGroup);
+        btnUploadFile->setObjectName(QString::fromUtf8("btnUploadFile"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/icon/upload.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnUploadFile->setIcon(icon4);
+        btnUploadFile->setIconSize(QSize(32, 32));
+        btnUploadFile->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout->addWidget(btnUploadFile);
+
+        horizontalSpacer_7 = new QSpacerItem(44, 17, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_7);
+
 
         horizontalLayout_3->addLayout(horizontalLayout);
 
-        horizontalSpacer = new QSpacerItem(47, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer);
+        horizontalLayout_3->addItem(horizontalSpacer_8);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
@@ -155,25 +179,25 @@ public:
 
         btnHint = new QToolButton(toolBtnGroup);
         btnHint->setObjectName(QString::fromUtf8("btnHint"));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/icon/zuixiaohua_1.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btnHint->setIcon(icon4);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/icon/zuixiaohua_1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnHint->setIcon(icon5);
 
         horizontalLayout_2->addWidget(btnHint);
 
         btnMax = new QToolButton(toolBtnGroup);
         btnMax->setObjectName(QString::fromUtf8("btnMax"));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/icon/zuidahua_1.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btnMax->setIcon(icon5);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/icon/zuidahua_1.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnMax->setIcon(icon6);
 
         horizontalLayout_2->addWidget(btnMax);
 
         btnClose = new QToolButton(toolBtnGroup);
         btnClose->setObjectName(QString::fromUtf8("btnClose"));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/icon/guanbi.png"), QSize(), QIcon::Normal, QIcon::Off);
-        btnClose->setIcon(icon6);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/icon/guanbi.png"), QSize(), QIcon::Normal, QIcon::Off);
+        btnClose->setIcon(icon7);
 
         horizontalLayout_2->addWidget(btnClose);
 
@@ -193,6 +217,9 @@ public:
         horizontalLayout_3->addLayout(verticalLayout);
 
 
+        horizontalLayout_4->addLayout(horizontalLayout_3);
+
+
         retranslateUi(TopBtnGroup);
 
         QMetaObject::connectSlotsByName(TopBtnGroup);
@@ -207,6 +234,7 @@ public:
         btnDownlowdList->setText(QCoreApplication::translate("TopBtnGroup", "\344\270\213\350\275\275\346\246\234", nullptr));
         btnUpdateList->setText(QCoreApplication::translate("TopBtnGroup", "\344\274\240\350\276\223 \345\210\227\350\241\250", nullptr));
         btnSwitchUser->setText(QCoreApplication::translate("TopBtnGroup", "\345\210\207\346\215\242\347\224\250\346\210\267", nullptr));
+        btnUploadFile->setText(QCoreApplication::translate("TopBtnGroup", "\344\270\212\344\274\240\346\226\207\344\273\266", nullptr));
         toolBtnGroup->setTitle(QString());
         btnHint->setText(QCoreApplication::translate("TopBtnGroup", "...", nullptr));
         btnMax->setText(QCoreApplication::translate("TopBtnGroup", "...", nullptr));
