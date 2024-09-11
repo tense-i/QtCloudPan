@@ -206,6 +206,7 @@ void MyFileWidget::getMyFileCount() {
     });
 }
 void MyFileWidget::uploadFile() {
+    // undo
 }
 void MyFileWidget::getMyFileList(FileOperation operation) {
 
@@ -245,6 +246,8 @@ void MyFileWidget::getMyFileList(FileOperation operation) {
         }
         QJsonArray array = obj.value("list").toArray();
         int size = array.size();
+        // 清空原有列表、重新获取数据渲染
+        fileList.clear();
         for (int i = 0; i < size; ++i) {
             QJsonObject obj = array.at(i).toObject();
             FileInfo *fileInfo = new FileInfo();
@@ -269,7 +272,12 @@ void MyFileWidget::getMyFileList(FileOperation operation) {
 
 
 void MyFileWidget::showInListWidget(MyFileWidget::FileList &fileList) {
-    ui->listWidget->clear();
+    qDebug() << "before clear";
+    qDebug() << ui->listWidget->count();
+    ui->listWidget->clear();// 清除列表
+    qDebug() << ui->listWidget->count();
+    ui->listWidget->update();
+    qDebug() << "filelist" << fileList.size();
     for (int i = 0; i < fileList.size(); ++i) {
         FileInfo *fileInfo = fileList.at(i);
         QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
@@ -277,4 +285,10 @@ void MyFileWidget::showInListWidget(MyFileWidget::FileList &fileList) {
         item->setText(fileInfo->fileName);
         ui->listWidget->addItem(item);
     }
+    qDebug() << "after add ";
+    qDebug() << ui->listWidget->count();
+    qDebug() << "//////";
+}
+void MyFileWidget::reflushListWidget() {
+    getMyFileList(FileOperation::REFRESH);
 }

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TopBtnGroup_t {
-    const uint offsetsAndSize[14];
-    char stringdata0[104];
+    const uint offsetsAndSize[16];
+    char stringdata0[119];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_TopBtnGroup_t, stringdata0) + ofs), len 
@@ -35,12 +35,13 @@ QT_MOC_LITERAL(28, 0), // ""
 QT_MOC_LITERAL(29, 13), // "open_UserPage"
 QT_MOC_LITERAL(43, 21), // "open_downloadListPage"
 QT_MOC_LITERAL(65, 19), // "open_uploadListPage"
-QT_MOC_LITERAL(85, 18) // "open_shareListPage"
+QT_MOC_LITERAL(85, 18), // "open_shareListPage"
+QT_MOC_LITERAL(104, 14) // "sig_uploadfile"
 
     },
     "TopBtnGroup\0open_myFilePage\0\0open_UserPage\0"
     "open_downloadListPage\0open_uploadListPage\0"
-    "open_shareListPage"
+    "open_shareListPage\0sig_uploadfile"
 };
 #undef QT_MOC_LITERAL
 
@@ -50,21 +51,23 @@ static const uint qt_meta_data_TopBtnGroup[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       5,       // signalCount
+       6,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   44,    2, 0x06,    1 /* Public */,
-       3,    0,   45,    2, 0x06,    2 /* Public */,
-       4,    0,   46,    2, 0x06,    3 /* Public */,
-       5,    0,   47,    2, 0x06,    4 /* Public */,
-       6,    0,   48,    2, 0x06,    5 /* Public */,
+       1,    0,   50,    2, 0x06,    1 /* Public */,
+       3,    0,   51,    2, 0x06,    2 /* Public */,
+       4,    0,   52,    2, 0x06,    3 /* Public */,
+       5,    0,   53,    2, 0x06,    4 /* Public */,
+       6,    0,   54,    2, 0x06,    5 /* Public */,
+       7,    0,   55,    2, 0x06,    6 /* Public */,
 
  // signals: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -85,6 +88,7 @@ void TopBtnGroup::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 2: _t->open_downloadListPage(); break;
         case 3: _t->open_uploadListPage(); break;
         case 4: _t->open_shareListPage(); break;
+        case 5: _t->sig_uploadfile(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -124,6 +128,13 @@ void TopBtnGroup::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
                 return;
             }
         }
+        {
+            using _t = void (TopBtnGroup::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&TopBtnGroup::sig_uploadfile)) {
+                *result = 5;
+                return;
+            }
+        }
     }
     (void)_a;
 }
@@ -135,7 +146,7 @@ const QMetaObject TopBtnGroup::staticMetaObject = { {
     qt_static_metacall,
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_TopBtnGroup_t
-, QtPrivate::TypeAndForceComplete<TopBtnGroup, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<TopBtnGroup, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 
@@ -163,13 +174,13 @@ int TopBtnGroup::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }
@@ -202,6 +213,12 @@ void TopBtnGroup::open_uploadListPage()
 void TopBtnGroup::open_shareListPage()
 {
     QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
+}
+
+// SIGNAL 5
+void TopBtnGroup::sig_uploadfile()
+{
+    QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

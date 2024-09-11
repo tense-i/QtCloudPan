@@ -27,6 +27,8 @@ public:
 private:
     void initBaseQSS();
     void initSlot();
+
+
 private slots:
     void showMaxed();
 

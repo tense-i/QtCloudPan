@@ -49,7 +49,7 @@ void Common::writeLoginInfo(QString username, QString password, bool isRemember,
     QJsonDocument doc = QJsonDocument::fromVariant(map);
     QFile file(path);
     // 输出当前路径
-    qDebug() << QDir::currentPath();
+    //    qDebug() << QDir::currentPath();
 
     if (file.open(QIODevice::WriteOnly)) {
         file.write(doc.toJson());

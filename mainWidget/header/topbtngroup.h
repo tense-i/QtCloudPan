@@ -29,7 +29,7 @@ signals:
     void open_downloadListPage();
     void open_uploadListPage();
     void open_shareListPage();
-
+    void sig_uploadfile();
 
 private:
     Ui::TopBtnGroup *ui;

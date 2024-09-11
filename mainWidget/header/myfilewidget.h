@@ -26,7 +26,8 @@ class MyFileWidget : public QWidget {
 public:
     explicit MyFileWidget(QWidget *parent = nullptr);
     ~MyFileWidget() override;
-
+    void uploadFile();
+    void reflushListWidget();
 
 private:
     void initListWidget();
@@ -37,7 +38,7 @@ private:
 
 private slots:
     void onRightMenu(const QPoint &pos);
-    void uploadFile();
+
     void showInListWidget(FileList &fileList);
 
 private:

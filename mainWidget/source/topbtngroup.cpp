@@ -17,6 +17,7 @@ TopBtnGroup::TopBtnGroup(QWidget *parent) : MovableWidget(parent), ui(new Ui::To
     connect(ui->btnDownlowdList, &QToolButton::clicked, this, &TopBtnGroup::open_downloadListPage);
     connect(ui->btnUpdateList, &QToolButton::clicked, this, &TopBtnGroup::open_uploadListPage);
     connect(ui->btnShareList, &QToolButton::clicked, this, &TopBtnGroup::open_shareListPage);
+    connect(ui->btnUploadFile, &QToolButton::clicked, this, &TopBtnGroup::sig_uploadfile);
 }
 
 TopBtnGroup::~TopBtnGroup() {
