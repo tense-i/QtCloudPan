@@ -272,22 +272,16 @@ void MyFileWidget::getMyFileList(FileOperation operation) {
 
 
 void MyFileWidget::showInListWidget(MyFileWidget::FileList &fileList) {
-    qDebug() << "before clear";
-    qDebug() << ui->listWidget->count();
     ui->listWidget->clear();// 清除列表
-    qDebug() << ui->listWidget->count();
     ui->listWidget->update();
-    qDebug() << "filelist" << fileList.size();
     for (int i = 0; i < fileList.size(); ++i) {
         FileInfo *fileInfo = fileList.at(i);
         QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
-        item->setIcon(QIcon(":/icon/logo.ico"));
+        QString iconPath = QString(":/icon/%1.png").arg(fileInfo->type);
+        item->setIcon(QIcon(iconPath));
         item->setText(fileInfo->fileName);
         ui->listWidget->addItem(item);
     }
-    qDebug() << "after add ";
-    qDebug() << ui->listWidget->count();
-    qDebug() << "//////";
 }
 void MyFileWidget::reflushListWidget() {
     getMyFileList(FileOperation::REFRESH);

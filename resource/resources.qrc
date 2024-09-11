@@ -1,29 +1,77 @@
 <RCC>
     <qresource prefix="/">
-        <file>icon/login_bk.jpg</file>
+        <file>resources.qrc</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>icon/4xww8d.png</file>
+        <file>icon/ai.png</file>
+        <file>icon/apk.png</file>
+        <file>icon/audio.png</file>
+        <file>icon/avi.png</file>
+        <file>icon/axure.png</file>
+        <file>icon/bar-chart.png</file>
+        <file>icon/bat.png</file>
+        <file>icon/bmp.png</file>
+        <file>icon/chat.png</file>
+        <file>icon/css.png</file>
+        <file>icon/csv.png</file>
+        <file>icon/default.png</file>
+        <file>icon/development.png</file>
+        <file>icon/eps.png</file>
+        <file>icon/excel.png</file>
+        <file>icon/exe.png</file>
+        <file>icon/figma.png</file>
+        <file>icon/flv.png</file>
+        <file>icon/folder-empty.png</file>
+        <file>icon/folder.png</file>
+        <file>icon/gif.png</file>
         <file>icon/guanbi.png</file>
-        <file>icon/zuidahua.png</file>
-        <file>icon/zuidahua_1.png</file>
-        <file>icon/zuixiaohua.png</file>
-        <file>icon/zuixiaohua_1.png</file>
+        <file>icon/html.png</file>
+        <file>icon/image.png</file>
+        <file>icon/jpg.png</file>
+        <file>icon/js.png</file>
+        <file>icon/line-chart.png</file>
+        <file>icon/login_bk.jpg</file>
+        <file>icon/login_bk2.png</file>
         <file>icon/logo.ico</file>
         <file>icon/logo.png</file>
-        <file>icon/login_bk2.png</file>
-        <file>icon/4xww8d.png</file>
-        <file>icon/upload.png</file>
+        <file>icon/mov.png</file>
+        <file>icon/MP3.png</file>
+        <file>icon/mp4.png</file>
+        <file>icon/pdf.png</file>
+        <file>icon/pie-chart.png</file>
+        <file>icon/png.png</file>
+        <file>icon/ppt.png</file>
+        <file>icon/psd.png</file>
+        <file>icon/rar.png</file>
+        <file>icon/raw.png</file>
+        <file>icon/sketch.png</file>
+        <file>icon/svg.png</file>
+        <file>icon/table.png</file>
+        <file>icon/tif.png</file>
         <file>icon/title_change.png</file>
         <file>icon/title_data.png</file>
         <file>icon/title_file.png</file>
         <file>icon/title_hot.png</file>
         <file>icon/title_share.png</file>
         <file>icon/title_user.png</file>
+        <file>icon/txt.png</file>
+        <file>icon/upload.png</file>
+        <file>icon/video.png</file>
+        <file>icon/wav.png</file>
+        <file>icon/word.png</file>
+        <file>icon/zip.png</file>
+        <file>icon/zuidahua.png</file>
+        <file>icon/zuidahua_1.png</file>
+        <file>icon/zuixiaohua.png</file>
+        <file>icon/zuixiaohua_1.png</file>
     </qresource>
-
+    
     <qresource prefix="/">
-        <file>style/LoginDialogStyle.qss</file>
-        <file>style/styles.qss</file>
         <file>style/base.qss</file>
+        <file>style/LoginDialogStyle.qss</file>
         <file>style/mainWindow.qss</file>
+        <file>style/styles.css</file>
+        <file>style/styles.qss</file>
     </qresource>
-
 </RCC>
