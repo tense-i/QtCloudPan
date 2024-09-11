@@ -76,6 +76,7 @@ D:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen/GL4Z4FGM4U/moc_topbt
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qfont.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qfontinfo.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qfontmetrics.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtGui/qicon.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qimage.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qkeysequence.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qpaintdevice.h \
@@ -91,8 +92,11 @@ D:/Code/qcode/QcloudObj/cmake-build-debug/QcloudObj_autogen/GL4Z4FGM4U/moc_topbt
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QToolButton \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtoolbutton.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \

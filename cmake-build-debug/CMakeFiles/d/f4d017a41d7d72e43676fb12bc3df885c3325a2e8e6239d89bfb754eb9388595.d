@@ -146,12 +146,15 @@ QcloudObj_autogen/timestamp: \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QDialog \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QLabel \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QMenu \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QToolButton \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qdialog.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qlabel.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qmenu.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtoolbutton.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qwidget.h \

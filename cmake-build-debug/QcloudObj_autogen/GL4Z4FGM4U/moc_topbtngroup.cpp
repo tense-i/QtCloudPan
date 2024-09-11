@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TopBtnGroup_t {
-    const uint offsetsAndSize[16];
-    char stringdata0[119];
+    const uint offsetsAndSize[22];
+    char stringdata0[157];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_TopBtnGroup_t, stringdata0) + ofs), len 
@@ -36,12 +36,16 @@ QT_MOC_LITERAL(29, 13), // "open_UserPage"
 QT_MOC_LITERAL(43, 21), // "open_downloadListPage"
 QT_MOC_LITERAL(65, 19), // "open_uploadListPage"
 QT_MOC_LITERAL(85, 18), // "open_shareListPage"
-QT_MOC_LITERAL(104, 14) // "sig_uploadfile"
+QT_MOC_LITERAL(104, 14), // "sig_uploadfile"
+QT_MOC_LITERAL(119, 20), // "sig_changedSelectBtn"
+QT_MOC_LITERAL(140, 12), // "QToolButton*"
+QT_MOC_LITERAL(153, 3) // "btn"
 
     },
     "TopBtnGroup\0open_myFilePage\0\0open_UserPage\0"
     "open_downloadListPage\0open_uploadListPage\0"
-    "open_shareListPage\0sig_uploadfile"
+    "open_shareListPage\0sig_uploadfile\0"
+    "sig_changedSelectBtn\0QToolButton*\0btn"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,20 +55,21 @@ static const uint qt_meta_data_TopBtnGroup[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       6,       // signalCount
+       7,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   50,    2, 0x06,    1 /* Public */,
-       3,    0,   51,    2, 0x06,    2 /* Public */,
-       4,    0,   52,    2, 0x06,    3 /* Public */,
-       5,    0,   53,    2, 0x06,    4 /* Public */,
-       6,    0,   54,    2, 0x06,    5 /* Public */,
-       7,    0,   55,    2, 0x06,    6 /* Public */,
+       1,    0,   56,    2, 0x06,    1 /* Public */,
+       3,    0,   57,    2, 0x06,    2 /* Public */,
+       4,    0,   58,    2, 0x06,    3 /* Public */,
+       5,    0,   59,    2, 0x06,    4 /* Public */,
+       6,    0,   60,    2, 0x06,    5 /* Public */,
+       7,    0,   61,    2, 0x06,    6 /* Public */,
+       8,    1,   62,    2, 0x06,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -73,6 +78,7 @@ static const uint qt_meta_data_TopBtnGroup[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 9,   10,
 
        0        // eod
 };
@@ -89,7 +95,19 @@ void TopBtnGroup::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 3: _t->open_uploadListPage(); break;
         case 4: _t->open_shareListPage(); break;
         case 5: _t->sig_uploadfile(); break;
+        case 6: _t->sig_changedSelectBtn((*reinterpret_cast< std::add_pointer_t<QToolButton*>>(_a[1]))); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 6:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QToolButton* >(); break;
+            }
+            break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
@@ -135,8 +153,14 @@ void TopBtnGroup::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
                 return;
             }
         }
+        {
+            using _t = void (TopBtnGroup::*)(QToolButton * );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&TopBtnGroup::sig_changedSelectBtn)) {
+                *result = 6;
+                return;
+            }
+        }
     }
-    (void)_a;
 }
 
 const QMetaObject TopBtnGroup::staticMetaObject = { {
@@ -146,7 +170,7 @@ const QMetaObject TopBtnGroup::staticMetaObject = { {
     qt_static_metacall,
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_TopBtnGroup_t
-, QtPrivate::TypeAndForceComplete<TopBtnGroup, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<TopBtnGroup, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QToolButton *, std::false_type>
 
 
 
@@ -174,13 +198,13 @@ int TopBtnGroup::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        if (_id < 7)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 7;
     }
     return _id;
 }
@@ -219,6 +243,13 @@ void TopBtnGroup::open_shareListPage()
 void TopBtnGroup::sig_uploadfile()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
+}
+
+// SIGNAL 6
+void TopBtnGroup::sig_changedSelectBtn(QToolButton * _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 6, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

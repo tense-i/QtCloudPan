@@ -7,6 +7,7 @@
 
 #include "../utils/header/movablewidget.h"
 
+#include <QToolButton>
 #include <QWidget>
 
 
@@ -30,9 +31,15 @@ signals:
     void open_uploadListPage();
     void open_shareListPage();
     void sig_uploadfile();
+    void sig_changedSelectBtn(QToolButton *btn);
+
 
 private:
     Ui::TopBtnGroup *ui;
+    QToolButton *lastSelectBtn = nullptr;
+    QToolButton *currentSelectBtn = nullptr;
+    static const QString selectBtnColor;
+    static const QString unSelectBtnColor;
 };
 
 
