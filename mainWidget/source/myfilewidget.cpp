@@ -130,6 +130,7 @@ void MyFileWidget::menuActions() {
     connect(actionShare, &QAction::triggered, this, [=]() {
         // 分享
         //        dealFile(FileOperation::SHARE);
+        shareFiles();
     });
     connect(actionAscOnDownload, &QAction::triggered, this, [=]() {
         // 按下载量排序
@@ -175,7 +176,7 @@ void MyFileWidget::downloadFiles() {
 void MyFileWidget::getMyFileCount() {
     myFilesCount = 0;
     QHttpRequest *request = new QHttpRequest();
-    QString url = "http://localhost:8080/cloudObj/myfiles/count";
+    QString url = "/myfiles/count";
     request->setRequestUrl(url);
     request->addRequestParameterInJson("username", userInfo->getUsername());
     request->addRequestParameterInJson("token", userInfo->getToken());
@@ -227,7 +228,7 @@ void MyFileWidget::getMyFileList(FileOperation operation) {
     }
 
     QHttpRequest *request = new QHttpRequest();
-    QString url = QString("http://localhost:8080/cloudObj/myfiles/list/%1").arg(strCmd);
+    QString url = QString("/myfiles/list/%1").arg(strCmd);
     request->setRequestUrl(url);
     request->addRequestParameterInJson("username", userInfo->getUsername());
     request->setJWTToken(userInfo->getToken());
@@ -293,4 +294,53 @@ void MyFileWidget::addUploadItem() {
     item->setIcon(QIcon(":/icon/upload.png"));
     item->setText("上传文件");
     ui->listWidget->addItem(item);
+}
+void MyFileWidget::shareFiles() {
+    QListWidgetItem *item = ui->listWidget->currentItem();
+    if (item == nullptr) {
+        return;
+    }
+    FileInfo *fileInfo = nullptr;
+    int size = fileList.size();
+    for (int i = 0; i < size; ++i) {
+        fileInfo = fileList.at(i);
+        if (fileInfo->fileName == item->text()) {
+            break;
+        }
+    }
+    QHttpRequest *request = new QHttpRequest();
+    QString url = "/sharefile";
+    request->setRequestUrl(url);
+    request->addRequestParameterInJson("username", userInfo->getUsername());
+    request->addRequestParameterInJson("fileName", fileInfo->fileName);
+    request->addRequestParameterInJson("filemd5", fileInfo->filemd5);
+    request->setJWTToken(userInfo->getToken());
+    request->sendPostRequest();
+    QNetworkReply *reply = request->getReply();
+    connect(reply, &QNetworkReply::finished, this, [=] {
+        QByteArray data = reply->readAll();
+        QJsonDocument doc = QJsonDocument::fromJson(data);
+        QJsonObject obj = doc.object();
+        int code = obj.value("code").toInt();
+        if (code == 0) {
+            QMessageBox::critical(this, "分享失败", "分享失败");
+            return;
+        }
+        int shareStatus = obj.value("shareStatus").toInt();
+        if (shareStatus == ShareFlileStatus::Shared) {
+            QMessageBox::information(this, "分享成功", "分享成功");
+        } else if (shareStatus == ShareFlileStatus::CancelShare) {
+            QMessageBox::critical(this, "分享失败", "分享失败");
+        } else if (shareStatus == ShareFlileStatus::SharedByOthers) {
+            QMessageBox::information(this, "分享失败", "文件已被分享");
+        }
+        reply->deleteLater();
+    });
+}
+void MyFileWidget::getShareFiles() {
+}
+void MyFileWidget::getShareFile(FileInfo *fileInfo) {
+    QHttpRequest *request = new QHttpRequest();
+    QString url = "/shareFiles";
+    request->sendGetRequest();
 }

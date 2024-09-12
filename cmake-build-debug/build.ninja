@@ -253,7 +253,7 @@ build QcloudObj_autogen/6WJNPILU4A/qrc_resources.cpp | ${cmake_ninja_workdir}Qcl
 #############################################
 # Phony custom command for CMakeFiles\QcloudObj_autogen_timestamp_deps
 
-build CMakeFiles/QcloudObj_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/QcloudObj_autogen_timestamp_deps: phony D$:/App/Qt/6.2.4/mingw_64/./bin/moc.exe D$:/App/Qt/6.2.4/mingw_64/./bin/uic.exe D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Network.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Sql.a
+build CMakeFiles/QcloudObj_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/QcloudObj_autogen_timestamp_deps: phony D$:/App/Qt/6.2.4/mingw_64/./bin/moc.exe D$:/App/Qt/6.2.4/mingw_64/./bin/uic.exe D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Sql.a D$:/App/Qt/6.2.4/mingw_64/lib/libQt6Network.a
 
 
 #############################################

@@ -23,6 +23,8 @@ public:
     ~mainWindow() override;
     void setUsernameInUI(QString username);
     void showLoginDialog();
+    static const int TOKEN_EXPIRED = 401;
+
 
 private:
     void initBaseQSS();

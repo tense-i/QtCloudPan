@@ -29,13 +29,16 @@ public:
     void uploadFile();
     void reflushListWidget();
 
+    static const int TOKEN_EXPIRED = 401;
+
 private:
     void initListWidget();
     void addMenu();
     void menuActions();
     void downloadFiles();
-
-
+    void shareFiles();
+    void getShareFiles();
+    void getShareFile(FileInfo *fileInfo);
 private slots:
     void onRightMenu(const QPoint &pos);
 
@@ -60,7 +63,12 @@ private:
         Download,
         Record
     };
+    enum ShareFlileStatus {
+        Shared = 1,       // 已分享
+        CancelShare = 0,  // 取消分享
+        SharedByOthers = 2// 别人分享过了
 
+    };
     LoginUserInfo *userInfo;
     FileList fileList;// 任务列表
     QStringList fileTypeList;

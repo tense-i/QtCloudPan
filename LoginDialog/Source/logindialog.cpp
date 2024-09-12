@@ -124,7 +124,7 @@ void LoginDialog::login() {
 
     // 发送请求到服务器
     QHttpRequest *request = new QHttpRequest();
-    request->setRequestUrl("http://localhost:8080/cloudObj/login");
+    request->setRequestUrl("/login");
     request->addRequestParameterInJson("username", username);
     request->addRequestParameterInJson("password", md5Passwd);
     request->sendPostRequest();
@@ -203,7 +203,7 @@ void LoginDialog::registerUser() {
 
     // 发送请求到服务器
     QHttpRequest *request = new QHttpRequest();
-    request->setRequestUrl("http://localhost:8080/cloudObj/register");
+    request->setRequestUrl("/register");
     request->addRequestParameterInJson("username", username);
     request->addRequestParameterInJson("password", QString(md5Passwd.toHex()));
     request->addRequestParameterInJson("email", email);
