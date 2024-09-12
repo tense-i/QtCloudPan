@@ -95,8 +95,8 @@ void MyFileWidget::addMenu() {
 
     // 空白处显示的菜单
     menuEmpty = new QMenu(this);
-    actionAscOnDownload = new QAction("升序下载", this);
-    actionDescOnDownload = new QAction("降序下载", this);
+    actionAscOnDownload = new QAction("按下载量升序", this);
+    actionDescOnDownload = new QAction("按下载量降序", this);
     actionRefresh = new QAction("刷新", this);
     actionUpload = new QAction("上传文件", this);
     menuEmpty->addAction(actionAscOnDownload);
@@ -282,7 +282,15 @@ void MyFileWidget::showInListWidget(MyFileWidget::FileList &fileList) {
         item->setText(fileInfo->fileName);
         ui->listWidget->addItem(item);
     }
+
+    addUploadItem();
 }
 void MyFileWidget::reflushListWidget() {
     getMyFileList(FileOperation::REFRESH);
+}
+void MyFileWidget::addUploadItem() {
+    QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
+    item->setIcon(QIcon(":/icon/upload.png"));
+    item->setText("上传文件");
+    ui->listWidget->addItem(item);
 }

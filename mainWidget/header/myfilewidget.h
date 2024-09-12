@@ -40,6 +40,7 @@ private slots:
     void onRightMenu(const QPoint &pos);
 
     void showInListWidget(FileList &fileList);
+    void addUploadItem();
 
 private:
     Ui::MyFileWidget *ui;
