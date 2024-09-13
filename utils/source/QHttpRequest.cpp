@@ -81,3 +81,13 @@ QJsonObject QHttpRequest::getResponseByJson() {
     QJsonDocument doc = QJsonDocument::fromJson(data);
     return doc.object();
 }
+void QHttpRequest::sendGetRequest(const QString &url, const QString &token) {
+    request.setUrl(QUrl(QHttpRequest::BASE_URL + url));
+    setJWTToken(token);
+    sendGetRequest();
+}
+void QHttpRequest::sendPostRequest(const QString &url, const QString &token) {
+    request.setUrl(QUrl(QHttpRequest::BASE_URL + url));
+    setJWTToken(token);
+    sendPostRequest();
+}

@@ -42,6 +42,12 @@ public:
 
     QNetworkReply *getReply() const;
 
+public:
+    static const int TOKEN_EXPIRED = 401;
+    static const int SUCCESS = 1;
+    static const int FAILED = 0;
+    
+
 private:
     QJsonObject requestJson;
     QJsonDocument requestDoc;

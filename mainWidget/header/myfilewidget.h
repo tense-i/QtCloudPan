@@ -39,6 +39,9 @@ private:
     void shareFiles();
     void getShareFiles();
     void getShareFile(FileInfo *fileInfo);
+    void showFileInfo();
+    void deleteFiles();
+    void deleteFile(FileInfo *fileInfo);
 private slots:
     void onRightMenu(const QPoint &pos);
 
