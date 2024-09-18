@@ -6,12 +6,13 @@
 
 #include "myfilewidget.h"
 #include "../../utils/header/FileInfo.h"
+#include "../../utils/header/HttpMultiPartFile.h"
 #include "../LoginDialog/header/LoginUserInfo.h"
 #include "../utils/header/QHttpRequest.h"
 #include "ui_MyFileWidget.h"
-
 #include <QFileDialog>
 #include <QGraphicsDropShadowEffect>
+#include <QHttpMultiPart>
 #include <QJsonArray>
 #include <QMessageBox>
 
@@ -64,6 +65,13 @@ void MyFileWidget::initListWidget() {
         } else {
             // 打开文件
             //            openFile(text);
+        }
+    });
+    connect(ui->listWidget, &QListWidget::itemDoubleClicked, this, [=](QListWidgetItem *item) {
+        QString text = item->text();
+        if (text == "上传文件") {
+            // 上传文件
+            uploadFile();
         }
     });
 }
@@ -143,7 +151,7 @@ void MyFileWidget::menuActions() {
     });
     connect(actionUpload, &QAction::triggered, this, [=]() {
         // 上传文件
-        //        uploadFile();
+        uploadFile();
     });
 }
 void MyFileWidget::downloadFiles() {
@@ -216,8 +224,68 @@ void MyFileWidget::getMyFileCount() {
     });
 }
 void MyFileWidget::uploadFile() {
-    // undo
+    QStringList filePaths = QFileDialog::getOpenFileNames(this, "选择文件");
+    if (filePaths.isEmpty()) {
+        return;
+    }
+
+
+    QHttpMultiPart *multiPart = new QHttpMultiPart(QHttpMultiPart::FormDataType);
+    for (QString filepath: filePaths) {
+        int index = filepath.lastIndexOf("/");
+        QString fileName = filepath.mid(index + 1);
+        QFile *file = new QFile(filepath);
+        if (!file->open(QIODevice::ReadOnly)) {
+            qDebug() << "open file error";
+            return;
+        }
+        QHttpPart filePart;
+        filePart.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"file\"; filename=\"" + fileName + "\""));
+        filePart.setHeader(QNetworkRequest::ContentTypeHeader, QVariant("application/octet-stream"));
+        filePart.setBodyDevice(file);
+        file->setParent(multiPart);
+        multiPart->append(filePart);
+    }
+
+    QHttpPart userIdPart;
+    userIdPart.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"username\""));
+    userIdPart.setBody(userInfo->getUsername().toUtf8());
+
+    QHttpPart tokenPart;
+    tokenPart.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"token\""));
+    tokenPart.setBody(userInfo->getToken().toUtf8());
+
+    multiPart->append(userIdPart);
+    multiPart->append(tokenPart);
+
+    QString url = "/uploadfile";
+    QNetworkRequest *request = new QNetworkRequest();
+    request->setUrl(QUrl(QHttpRequest::BASE_URL + url));
+    request->setRawHeader("Authorization", userInfo->getToken().toUtf8());
+
+    QNetworkAccessManager *manager = new QNetworkAccessManager();
+    QNetworkReply *reply = manager->post(*request, multiPart);
+
+    connect(reply, &QNetworkReply::finished, this, [=] {
+        QByteArray data = reply->readAll();
+        QJsonDocument doc = QJsonDocument::fromJson(data);
+        QJsonObject obj = doc.object();
+        int code = obj.value("code").toInt();
+        if (code == QHttpRequest::FAILED) {
+            QMessageBox::critical(this, "上传失败", "上传失败");
+            return;
+        }
+        int uploadStatus = obj.value("uploadStatus").toInt();
+        if (uploadStatus == 1) {
+            QMessageBox::information(this, "上传成功", "上传成功");
+        } else {
+            QMessageBox::critical(this, "上传失败", "上传失败");
+        }
+        reply->deleteLater();
+    });
 }
+
+
 void MyFileWidget::getMyFileList(FileOperation operation) {
 
     QString strCmd;
@@ -462,4 +530,12 @@ void MyFileWidget::removeItems(QList<QListWidgetItem *> selectedItems) {
 }
 void MyFileWidget::reflushListWidgetInCacheList() {
     showInListWidget(fileList);
+}
+void MyFileWidget::PartingFile(QString filePath) {
+}
+void MyFileWidget::uploadFile(QString filePath) {
+    QFile *file = new QFile(filePath);
+    if (!file->open(QIODevice::ReadOnly)) {
+        return;
+    }
 }

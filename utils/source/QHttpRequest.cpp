@@ -91,3 +91,6 @@ void QHttpRequest::sendPostRequest(const QString &url, const QString &token) {
     setJWTToken(token);
     sendPostRequest();
 }
+void QHttpRequest::sendPostRequestOnMultiPart(QHttpMultiPart *multiPart) {
+    reply = manager->post(request, multiPart);
+}

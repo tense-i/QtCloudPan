@@ -77,7 +77,9 @@ void mainWindow::initSlot() {
     connect(ui->topTitleWidget, &TopBtnGroup::open_shareListPage, this, [=]() {
         ui->stackedWidget->setCurrentWidget(ui->page_shareList);
     });
-    connect(ui->topTitleWidget, &TopBtnGroup::sig_uploadfile, ui->pageMyfile, &MyFileWidget::uploadFile);
+    connect(ui->topTitleWidget, &TopBtnGroup::sig_uploadfile, this, [=]() {
+        ui->pageMyfile->uploadFile();
+    });
 
     connect(loginDialog, &LoginDialog::loginSuccessSignal, this, [=] {
         qDebug() << "loginSuccessSignal in mainWindow";

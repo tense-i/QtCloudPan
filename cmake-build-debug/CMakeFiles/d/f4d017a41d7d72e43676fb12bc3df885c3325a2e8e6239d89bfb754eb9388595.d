@@ -511,11 +511,13 @@ QcloudObj_autogen/timestamp: \
   D:/Code/qcode/QcloudObj/utils/header/Common.h \
   D:/Code/qcode/QcloudObj/utils/header/DBUtils.h \
   D:/Code/qcode/QcloudObj/utils/header/FileInfo.h \
+  D:/Code/qcode/QcloudObj/utils/header/HttpMultiPartFile.h \
   D:/Code/qcode/QcloudObj/utils/header/QHttpRequest.h \
   D:/Code/qcode/QcloudObj/utils/header/movablewidget.h \
   D:/Code/qcode/QcloudObj/utils/source/Common.cpp \
   D:/Code/qcode/QcloudObj/utils/source/DBUtils.cpp \
   D:/Code/qcode/QcloudObj/utils/source/FileInfo.cpp \
+  D:/Code/qcode/QcloudObj/utils/source/HttpMultiPartFile.cpp \
   D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp \
   D:/Code/qcode/QcloudObj/utils/source/des.c \
   D:/Code/qcode/QcloudObj/utils/source/movablewidget.cpp \

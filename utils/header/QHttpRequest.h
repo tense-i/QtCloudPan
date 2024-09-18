@@ -31,6 +31,9 @@ public:
     void sendGetRequest(const QString &url, const QString &token);
     void sendGetRequest(const QString &url);
     void sendGetRequest();
+    void sendPostRequestOnMultiPart(QHttpMultiPart *multiPart, const QString &url, const QString &token);
+    void sendPostRequestOnMultiPart(QHttpMultiPart *multiPart);
+
     void sendPostRequest(const QString &url, const QString &token);
     void sendPostRequest(const QString &url);
     void sendPostRequest(const QString &url, QMap<QString, QVariant> params);
@@ -46,7 +49,7 @@ public:
     static const int TOKEN_EXPIRED = 401;
     static const int SUCCESS = 1;
     static const int FAILED = 0;
-    
+
 
 private:
     QJsonObject requestJson;

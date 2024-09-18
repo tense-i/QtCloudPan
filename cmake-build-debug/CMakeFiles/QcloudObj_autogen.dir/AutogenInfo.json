@@ -333,6 +333,12 @@
 			null
 		],
 		[
+			"D:/Code/qcode/QcloudObj/utils/header/HttpMultiPartFile.h",
+			"MU",
+			"4YVKRCMG4V/moc_HttpMultiPartFile.cpp",
+			null
+		],
+		[
 			"D:/Code/qcode/QcloudObj/utils/header/QHttpRequest.h",
 			"MU",
 			"4YVKRCMG4V/moc_QHttpRequest.cpp",
@@ -467,6 +473,11 @@
 		[ "D:/Code/qcode/QcloudObj/utils/source/Common.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/DBUtils.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/FileInfo.cpp", "MU", null ],
+		[
+			"D:/Code/qcode/QcloudObj/utils/source/HttpMultiPartFile.cpp",
+			"MU",
+			null
+		],
 		[ "D:/Code/qcode/QcloudObj/utils/source/QHttpRequest.cpp", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/des.c", "MU", null ],
 		[ "D:/Code/qcode/QcloudObj/utils/source/movablewidget.cpp", "MU", null ]

@@ -43,6 +43,9 @@ private:
     void showFileInfo();
     void deleteFiles();
     void deleteFile(FileInfo *fileInfo);
+    void PartingFile(QString filePath);
+    void uploadFile(QString filePath);
+
 private slots:
     void onRightMenu(const QPoint &pos);
 

@@ -14,6 +14,8 @@ FileInfoDialog::FileInfoDialog(QWidget *parent) : QDialog(parent), ui(new Ui::Fi
 FileInfoDialog::~FileInfoDialog() {
     delete ui;
 }
+
+
 void FileInfoDialog::setFileInfo(FileInfo *fileInfo) {
     qDebug() << "setFileInfo";
     ui->labFileName->setText(fileInfo->fileName);
