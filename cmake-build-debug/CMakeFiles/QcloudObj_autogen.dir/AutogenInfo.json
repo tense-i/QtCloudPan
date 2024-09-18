@@ -291,6 +291,12 @@
 			null
 		],
 		[
+			"D:/Code/qcode/QcloudObj/mainWidget/header/fileinfodialog.h",
+			"MU",
+			"GL4Z4FGM4U/moc_fileinfodialog.cpp",
+			null
+		],
+		[
 			"D:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.h",
 			"MU",
 			"GL4Z4FGM4U/moc_myfilewidget.cpp",
@@ -435,6 +441,11 @@
 		[ "D:/Code/qcode/QcloudObj/main.cpp", "MU", null ],
 		[
 			"D:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/qcode/QcloudObj/mainWidget/source/fileinfodialog.cpp",
 			"MU",
 			null
 		],

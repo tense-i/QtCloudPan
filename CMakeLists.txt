@@ -61,6 +61,9 @@ add_executable(QcloudObj main.cpp
         utils/header/FileInfo.h
         mainWidget/header/DownloadTask.cpp
         mainWidget/header/DownloadTask.h
+        mainWidget/source/fileinfodialog.cpp
+        mainWidget/header/fileinfodialog.h
+        mainWidget/source/fileinfodialog.ui
 )
 target_link_libraries(QcloudObj
         Qt::Core

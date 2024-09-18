@@ -36,6 +36,7 @@ QcloudObj_autogen/timestamp: \
   D:/App/Clion/CLion\ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake \
   D:/App/Clion/CLion\ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/QString \
+  D:/App/Qt/6.2.4/mingw_64/include/QtCore/qabstractitemmodel.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qalgorithms.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qanystringview.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qarraydata.h \
@@ -67,10 +68,12 @@ QcloudObj_autogen/timestamp: \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qhashfunctions.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qiodevice.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qiodevicebase.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtCore/qitemselectionmodel.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qiterable.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qiterator.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qline.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qlist.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtCore/qlocale.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qlogging.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qmap.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qmargins.h \
@@ -88,6 +91,7 @@ QcloudObj_autogen/timestamp: \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qprocessordetection.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qrect.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qrefcount.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtCore/qregularexpression.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qscopedpointer.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qscopeguard.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtCore/qset.h \
@@ -141,19 +145,34 @@ QcloudObj_autogen/timestamp: \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qtgui-config.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qtguiglobal.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qtransform.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtGui/qvalidator.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QDialog \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QLabel \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QListWidgetItem \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QMenu \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QToolButton \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/QWidget \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractbutton.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractitemview.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractslider.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qabstractspinbox.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qdialog.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qframe.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qlabel.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qlistview.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qlistwidget.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qmenu.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qrubberband.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qslider.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qstyle.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qstyleoption.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtabbar.h \
+  D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtoolbutton.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/App/Qt/6.2.4/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -480,9 +499,11 @@ QcloudObj_autogen/timestamp: \
   D:/Code/qcode/QcloudObj/main.cpp \
   D:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.cpp \
   D:/Code/qcode/QcloudObj/mainWidget/header/DownloadTask.h \
+  D:/Code/qcode/QcloudObj/mainWidget/header/fileinfodialog.h \
   D:/Code/qcode/QcloudObj/mainWidget/header/myfilewidget.h \
   D:/Code/qcode/QcloudObj/mainWidget/header/topbtngroup.h \
   D:/Code/qcode/QcloudObj/mainWidget/mainwindow.h \
+  D:/Code/qcode/QcloudObj/mainWidget/source/fileinfodialog.cpp \
   D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.cpp \
   D:/Code/qcode/QcloudObj/mainWidget/source/myfilewidget.cpp \
   D:/Code/qcode/QcloudObj/mainWidget/source/topbtngroup.cpp \
@@ -501,6 +522,7 @@ QcloudObj_autogen/timestamp: \
   D:/Code/qcode/QcloudObj/utils/utils.h \
   D:/Code/qcode/QcloudObj/LoginDialog/Source/logindialog.ui \
   D:/Code/qcode/QcloudObj/LoginDialog/Source/titlewidget.ui \
+  D:/Code/qcode/QcloudObj/mainWidget/source/fileinfodialog.ui \
   D:/Code/qcode/QcloudObj/mainWidget/source/mainwindow.ui \
   D:/Code/qcode/QcloudObj/mainWidget/source/myfilewidget.ui \
   D:/Code/qcode/QcloudObj/mainWidget/source/topbtngroup.ui \

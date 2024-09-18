@@ -119,6 +119,7 @@ void MyFileWidget::menuActions() {
     });
     connect(actionDelete, &QAction::triggered, this, [=]() {
         // 删除
+        deleteFiles();
     });
     connect(actionProperty, &QAction::triggered, this, [=]() {
         showFileInfo();
@@ -146,29 +147,41 @@ void MyFileWidget::menuActions() {
     });
 }
 void MyFileWidget::downloadFiles() {
-    // 发送
-    emit gotoTransform(TransformStatus::Download);
-
-    QListWidgetItem *item = ui->listWidget->currentItem();
-    if (item == nullptr) {
+    QList<QListWidgetItem *> selectedItems = ui->listWidget->selectedItems();
+    if (selectedItems.isEmpty()) {
         return;
     }
-    FileInfo *fileInfo = nullptr;
+    QStringList fileNames;
+    std::for_each(selectedItems.begin(), selectedItems.end(), [&](QListWidgetItem *item) {
+        fileNames.append(item->text());
+    });
 
-    int size = fileList.size();// 任务列表长度
-    for (int i = 0; i < size; ++i) {
-        fileInfo = fileList.at(i);
-        if (fileInfo->fileName == item->text()) {
-            QString filePath = QFileDialog::getSaveFileName(this, "请选择保存文件路径", fileInfo->fileName);
-
-            if (filePath.isEmpty()) {
-                return;
-            }
-            int res;
-            break;
+    QHttpRequest *request = new QHttpRequest();
+    QString url = "/downloadfiles";
+    request->addRequestParameterInJson("username", userInfo->getUsername());
+    request->addRequestParameterInJson("fileNames", QJsonArray::fromStringList(fileNames));
+    request->sendGetRequest(url, userInfo->getToken());
+    QNetworkReply *reply = request->getReply();
+    connect(reply, &QNetworkReply::finished, this, [=] {
+        QByteArray data = reply->readAll();
+        QJsonDocument doc = QJsonDocument::fromJson(data);
+        QJsonObject obj = doc.object();
+        int code = obj.value("code").toInt();
+        if (code == QHttpRequest::FAILED) {
+            QMessageBox::critical(this, "下载失败", "请求错误");
+            return;
         }
-    }
+        int downloadStatus = obj.value("downloadStatus").toInt();
+        if (downloadStatus == 1) {
+            QMessageBox::information(this, "下载成功", "下载成功");
+        } else if (downloadStatus == 0) {
+            QMessageBox::critical(this, "下载失败", "下载失败");
+        }
+        reply->deleteLater();
+    });
 }
+
+
 void MyFileWidget::getMyFileCount() {
     myFilesCount = 0;
     QHttpRequest *request = new QHttpRequest();
@@ -270,7 +283,6 @@ void MyFileWidget::getMyFileList(FileOperation operation) {
 
 void MyFileWidget::showInListWidget(MyFileWidget::FileList &fileList) {
     ui->listWidget->clear();// 清除列表
-    ui->listWidget->update();
     for (int i = 0; i < fileList.size(); ++i) {
         FileInfo *fileInfo = fileList.at(i);
         QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
@@ -279,7 +291,6 @@ void MyFileWidget::showInListWidget(MyFileWidget::FileList &fileList) {
         item->setText(fileInfo->fileName);
         ui->listWidget->addItem(item);
     }
-
     addUploadItem();
 }
 void MyFileWidget::reflushListWidget() {
@@ -291,6 +302,7 @@ void MyFileWidget::addUploadItem() {
     item->setText("上传文件");
     ui->listWidget->addItem(item);
 }
+
 void MyFileWidget::shareFiles() {
     QListWidgetItem *item = ui->listWidget->currentItem();
     if (item == nullptr) {
@@ -304,6 +316,13 @@ void MyFileWidget::shareFiles() {
             break;
         }
     }
+
+    if (fileInfo->shareStatus == ShareFlileStatus::Shared) {
+        QMessageBox::information(this, "分享失败", "文件已被分享");
+        return;
+    }
+    fileInfo->shareStatus = ShareFlileStatus::Shared;
+
     QHttpRequest *request = new QHttpRequest();
     QString url = "/sharefile";
     request->setRequestUrl(url);
@@ -342,6 +361,8 @@ void MyFileWidget::getShareFile(FileInfo *fileInfo) {
     QString url = "/shareFiles";
     request->sendGetRequest();
 }
+
+#include "../header/fileinfodialog.h"
 void MyFileWidget::showFileInfo() {
     QListWidgetItem *item = ui->listWidget->currentItem();
     if (item == nullptr) {
@@ -355,15 +376,11 @@ void MyFileWidget::showFileInfo() {
             break;
         }
     }
+    qDebug() << fileInfo->type;
 
-    QString info = QString("文件名：%1\n文件大小：%2\n文件类型：%3\n创建时间：%4\n下载量：%5\n分享状态：%6")
-                           .arg(fileInfo->fileName)
-                           .arg(fileInfo->size)
-                           .arg(fileInfo->type)
-                           .arg(fileInfo->createTime)
-                           .arg(fileInfo->pv)
-                           .arg(fileInfo->shareStatus);
-    QMessageBox::information(this, "文件信息", info);
+    FileInfoDialog *dialog = new FileInfoDialog(this);
+    dialog->setFileInfo(fileInfo);
+    dialog->show();
 }
 void MyFileWidget::deleteFiles() {
     QList<QListWidgetItem *> selectedItems = ui->listWidget->selectedItems();
@@ -394,6 +411,8 @@ void MyFileWidget::deleteFiles() {
         int deleteStatus = obj.value("deleteStatus").toInt();
         if (deleteStatus == 1) {
             QMessageBox::information(this, "删除成功", "删除成功");
+            removeItems(selectedItems);
+            showInListWidget(fileList);
         } else if (deleteStatus == 0) {
             QMessageBox::critical(this, "删除失败", "删除失败");
         }
@@ -431,4 +450,16 @@ void MyFileWidget::deleteFile(FileInfo *fileInfo) {
         }
         reply->deleteLater();
     });
+}
+
+void MyFileWidget::removeItems(QList<QListWidgetItem *> selectedItems) {
+
+    std::for_each(selectedItems.begin(), selectedItems.end(), [&](QListWidgetItem *item) {
+        qDebug() << "remove" << item->text();
+        fileList.removeAt(ui->listWidget->row(item));
+        delete item;
+    });
+}
+void MyFileWidget::reflushListWidgetInCacheList() {
+    showInListWidget(fileList);
 }

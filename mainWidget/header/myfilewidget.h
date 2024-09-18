@@ -9,6 +9,7 @@
 #include <QMenu>
 
 #include "../../utils/header/FileInfo.h"
+#include <QListWidgetItem>
 #include <QWidget>
 class LoginUserInfo;
 
@@ -47,6 +48,8 @@ private slots:
 
     void showInListWidget(FileList &fileList);
     void addUploadItem();
+    void removeItems(QList<QListWidgetItem *> selectedItems);
+    void reflushListWidgetInCacheList();
 
 private:
     Ui::MyFileWidget *ui;
